@@ -10,7 +10,6 @@
 
 body {
   font-family: "Roboto";
-  
 }
 
 /* same than html */
@@ -19,11 +18,19 @@ body {
 
   --size-divisor: 3;
 
+  /* A définir */
+  --text-size: 2rem;
+  --navbtn-text-size: 3rem;
+  --subnavbtn-text-size: 2.5rem;
+  --input-text-size: 3rem;
+  --nav-center-element-size: 63rem;
+
   --primary-color: #43b1e8;
   --secondary-color: #e9ecef;
   --tertiary-color: #ffffff;
 
   --disable-color: #9ea8b8;
+  --disable-clear-color: #e9dfdfbe;
   --validation-color: #60e091;
 
   --pusher-color: #2c7ea7;
@@ -32,11 +39,9 @@ body {
   --secondary-text-color: #707070;
 }
 
-
 /* ========================================================================== */
 /* TYPE */
 /* ========================================================================== */
-
 
 h1 {
   font-size: 2.6rem;
@@ -84,7 +89,7 @@ button {
 }
 
 /* ========================================================================== */
-/* HEADER LOGO */
+/* HEADER LOGO & NAVBAR & SUB NAVBAR*/
 /* ========================================================================== */
 header img {
   width: 15%;
@@ -101,22 +106,235 @@ header img {
   margin: auto;
 }
 
-
-
 .main-head {
   background: var(--primary-color);
-  padding: 6rem;
   width: 100%;
-
+  height: 12rem;
+  min-height: 12rem;
 }
 
-.main-nav {
-  display:grid;
-  grid-template-columns:15% 20% 30% 20% 15%;
+.navbar {
+  display: flex;
+  align-items: center;
 
+  width: 100%;
+
+  /*  padding horizontal */
+  padding: 0 6rem;
+
+  /* min displayed */
+  min-height: 12rem;
+}
+
+.container-navbar {
   height: 100%;
-  width: 100%;
+  display: flex;
+
+  flex: 1 1 20rem;
+  align-items: center;
 }
+
+.container-navbar span {
+  font-size: var(--navbtn-text-size);
+}
+
+.logo-navbar {
+  width: 11%;
+}
+
+.cours-navbar {
+  display: flex;
+  flex: 0.9 1 1px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  height: 12rem;
+  margin-left: 7.5rem;
+}
+
+.search-navbar {
+  display: flex;
+  flex: 1 1 30rem;
+  justify-content: flex-start;
+
+  height: 8rem;
+  position: relative;
+  margin-right: 4rem;
+}
+
+.search-navbar img {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  left: 1.5rem;
+  top: 1rem;
+  color: var(--disable-color);
+}
+
+.search-navbar input {
+  width: var(--nav-center-element-size);
+  height: 100%;
+  min-width: 58rem;
+  border: solid var(--disable-color);
+  border-width: 2px;
+  border-radius: 10px;
+
+  padding-left: 80px;
+
+  font-size: var(--input-text-size);
+  color: var(--secondary-text-color);
+}
+
+.block-navbar {
+  display: flex;
+  flex: 1 1 10rem;
+  flex-direction: rows;
+}
+
+.profil-navbar {
+  display: flex;
+  flex: 1 1 12rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  height: 12rem;
+
+  margin-right: 11.5rem;
+}
+
+.disconnect-navbar {
+  display: flex;
+  flex: 1 1 5rem;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.btn-navbar {
+  height: 55%;
+  display: flex;
+
+  color: var(--disable-clear-color);
+}
+
+.bar-navbar {
+  height: 10px;
+  background-color: var(--tertiary-color);
+
+  /* id disable : */
+  background-color: var(--disable-clear-color);
+}
+
+.cours-navbar > div {
+  width: 8rem;
+}
+
+.profil-navbar > div {
+  width: 7rem;
+}
+
+.disconnect-navbar > div {
+  width: 17.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Sub Navbar */
+/* -------------------------------------------------------------------------- */
+
+.subnavbar {
+  background: var(--secondary-color);
+  width: 100%;
+  height: 10rem;
+  min-height: 10rem;
+
+  display: flex;
+  flex: 1 1 20rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.container-subnavbar span {
+  /* font-size: var(--subnavbtn-text-size); */
+  font-size: var(--navbtn-text-size);
+}
+
+.container-subnavbar {
+  width: var(--nav-center-element-size);
+  display: flex;
+  justify-content: center;
+
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.allcours-subnavbar {
+  display: flex;
+  flex: 1 1 6rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  height: 10rem;
+}
+
+.mycours-subnavbar {
+  display: flex;
+  flex: 1 1 6rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  height: 10rem;
+}
+
+.suggestion-subnavbar {
+  display: flex;
+  flex: 1 1 6rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  height: 10rem;
+  padding-left: 2em;
+}
+
+.allcours-subnavbar > .btn-navbar {
+  background-color: var(--secondary-color);
+  color: var(--disable-color);
+}
+
+.allcours-subnavbar > .bar-navbar {
+  height: 10px;
+  width: 93%;
+  background-color: var(--tertiary-color);
+}
+
+.mycours-subnavbar > .btn-navbar {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  margin-right: 1.5rem;
+}
+
+.mycours-subnavbar > .bar-navbar {
+  height: 10px;
+  width: 66.5%;
+  margin-right: 1.5rem;
+  background-color: var(--primary-color);
+}
+
+.suggestion-subnavbar > .btn-navbar {
+  background-color: var(--secondary-color);
+  color: var(--disable-color);
+}
+
+.suggestion-subnavbar > .bar-navbar {
+  height: 10px;
+  width: 100%;
+  width: 79%;
+  background-color: var(--tertiary-color);
+}
+
 /* ========================================================================== */
 /* LOGIN SECTION */
 /* ========================================================================== */
@@ -259,6 +477,81 @@ button[type="submit"]:hover {
   margin-right: auto;
 }
 
+
+/* ========================================================================== */
+/* MAIN SECTION */
+/* ========================================================================== */
+
+.section-cours{
+
+  margin : 4rem 16.5%;
+  width: 67%;
+  display:flex;
+
+}
+
+hr{
+
+ 
+}
+
+/* ========================================================================== */
+/*  MY COURS SECTION */
+/* ========================================================================== */
+
+.following-cours{
+width: 100%;
+font-size: 2rem;
+}
+
+
+table{
+  border-collapse: collapse;
+  width:100%;
+  height: 10rem;
+  border: 1px solid;
+  border-color: var(--disable-color);
+}
+
+
+th{
+  border: 1px solid;
+  border-color: var(--disable-color);
+
+  color: var(--secondary-color);
+
+
+}
+
+.inprogress-tab th{
+  background-color: var(--primary-color);
+}
+
+.inprogress-tab th{
+  background-color: var(--primary-color);
+}
+.finish-tab th{
+  background-color: var(--validation-color);
+}
+
+
+td{
+  border: 1px solid;
+  border-color: var(--disable-color);
+}
+
+.inprogress-tab{
+
+  margin-top: 2rem;
+}
+
+
+
+.finish-tab{
+  margin-top: 2rem;
+
+}
+
 /* ========================================================================== */
 /* FOOTER */
 /* ========================================================================== */
@@ -267,7 +560,6 @@ footer {
   background: var(--secondary-color);
 
   height: auto;
- 
 }
 
 .separator-bar {
@@ -287,74 +579,59 @@ footer {
   height: 20vh;
 }
 
-
-.container-question{
-
-
-  
+.container-question {
   width: 100%;
   height: 7vh;
-position: absolute;
+  position: absolute;
 
-top:25%;
-
+  top: 25%;
 }
 
-.question{
-
+.question {
   width: 100%;
- height: 100%;
-
- position: relative;
-}
-
-.question>div{
-  display:inline-block;
-  text-align:left;
-  vertical-align:top;
-
-}
-
-
-.img-question{
-
-  width:25%;
   height: 100%;
-  
+
+  position: relative;
+}
+
+.question > div {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+
+.img-question {
+  width: 25%;
+  height: 100%;
+
   display: inline-block;
 
   border-top: thin solid var(--disable-color);
   border-bottom: thin solid var(--disable-color);
   border-left: thin solid var(--disable-color);
-  
+
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 
   text-align: center;
-  background:var(--primary-color);
-
+  background: var(--primary-color);
 
   position: relative;
-
 }
 
-.img-question input{
-width:70%;
-height: 75%;
+.img-question input {
+  width: 70%;
+  height: 75%;
 
-object-fit: scale-down;
+  object-fit: scale-down;
 
-
-    top:15%;
-    left: 15%;
-    position: absolute;
+  top: 15%;
+  left: 15%;
+  position: absolute;
 }
-
-
-
 
 .btn-question {
-  width:75%;
+  width: 75%;
   height: 100%;
 
   display: inline-block;
@@ -363,55 +640,47 @@ object-fit: scale-down;
   border-top: thin solid var(--disable-color);
   border-bottom: thin solid var(--disable-color);
   border-right: thin solid var(--disable-color);
-
- 
 }
 
-.btn-question button{
-
-
-
-  width:100%;
+.btn-question button {
+  width: 100%;
   height: 100%;
-  background:white;
-  color:gray;
-  
+  background: white;
+  color: gray;
+
   /* scale size */
   font-size: 2vh;
-  color:var(--primary-color);
+  color: var(--primary-color);
 
-  border : none;
+  border: none;
 }
 
-.sitemap{
+.sitemap {
   grid-column: 3;
-  
-  text-align:center;
+
+  text-align: center;
 
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   grid-template-rows: 40px 40px 40px 40px 15px;
-  
 }
 
-.sitemap a{
-text-align: center;
-margin-bottom: 1.5rem;;
-color: var(--primary-color);
-font-weight: bold;
-font-size: 2.5rem;
+.sitemap a {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 2.5rem;
 }
 
-
-#copy-footer{
+#copy-footer {
   grid-row: 6;
   height: 1px;
   font-size: 15px;
   color: var(--secondary-text-color);
 }
 
-
-.more{
+.more {
   grid-column: 5;
 
   text-align: center;
@@ -422,28 +691,24 @@ font-size: 2.5rem;
   height: 5rem;
 }
 
-
-.author{
-  color:var(--secondary-text-color)
+.author {
+  color: var(--secondary-text-color);
 }
 
-
-.author{
-  color:var(--secondary-text-color)
+.author {
+  color: var(--secondary-text-color);
 }
 
-.contact{
-  width:auto;
+.contact {
+  width: auto;
   height: auto;
 }
 
-
-.contact button{
-  width:13rem;
+.contact button {
+  width: 13rem;
   height: 4rem;
   border-radius: 6px;
 }
-
 
 /* ========================================================================== */
 /* RESPONSIVE  */
@@ -464,7 +729,7 @@ font-size: 2.5rem;
   }
 
   .form-wrapper {
-    margin-top: 6rem ;
+    margin-top: 6rem;
     width: 150rem;
     height: 15rem;
   }
@@ -485,19 +750,16 @@ font-size: 2.5rem;
 }
 
 @media screen and (max-width: 768px) {
-
-
   .section-login {
     height: 62vh;
   }
-
 
   .basic-head img {
     width: 40%;
   }
 
   .form-wrapper {
-    margin-top: 6rem ;
+    margin-top: 6rem;
     width: 80%;
     height: 80%;
   }
@@ -519,9 +781,6 @@ font-size: 2.5rem;
 
 /* phone */
 @media screen and (max-width: 480px) {
-
-
-
   .section-login {
     height: 68vh;
   }
@@ -531,11 +790,10 @@ font-size: 2.5rem;
   }
 
   .form-wrapper {
-   
     margin: 2rem;
 
-    margin-top:4rem;
-    margin-bottom:1rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 
     width: 80%;
 
@@ -566,11 +824,9 @@ font-size: 2.5rem;
     width: 90%;
   }
 
-
-
   .footer-wrapper {
     height: 50vh;
-    
+
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 60px;
@@ -583,42 +839,34 @@ font-size: 2.5rem;
     justify-content: center;
   }
 
-  .question{
-  
+  .question {
     height: 10vh;
   }
 
-  .sitemap{
-    margin-top:2vh;
+  .sitemap {
+    margin-top: 2vh;
   }
 
-  .sitemap p{
+  .sitemap p {
     visibility: hidden;
   }
 
-
-
-  .contact button{
-    width:100%;
+  .contact button {
+    width: 100%;
     height: 4rem;
     border-radius: 6px;
   }
-
 }
 
 @media screen and (max-height: 420px) {
-
-
-  .section-login{
-
-    text-align:center;
+  .section-login {
+    text-align: center;
   }
   .form-wrapper {
-   
     margin: 2rem;
 
-    margin-top:4rem;
-    margin-bottom:1rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 
     width: 80%;
 
@@ -643,28 +891,23 @@ font-size: 2.5rem;
     min-height: 100vh;
   }
 
-  .question{
-  
+  .question {
     height: 10vh;
-
   }
 
-  .sitemap{
-    margin-top:4vh;
+  .sitemap {
+    margin-top: 4vh;
   }
 
-  .sitemap p{
+  .sitemap p {
     visibility: hidden;
   }
 
-
-
-  .contact button{
-    width:100%;
+  .contact button {
+    width: 100%;
     height: 4rem;
     border-radius: 6px;
   }
-
 }
 
 @media screen and (max-width: 280px) {
