@@ -8,7 +8,7 @@ L'objectif de ce projet est de réaliser pour ma mère un site web de cours info
 
 ## Technologies:
 ### FRONT:
-Design : Css, Js
+Design : ReactJs Redux, CSS3
 Rich-Text Editor: ckeditor 
  
  
@@ -20,3 +20,20 @@ Serveur web: Apache ou Nginx ?
  
 Tools : Vscode, Adobe Xd
 VCS : Git
+
+
+
+#### STRUCTURE:
+organisation par fonctionnalités :
+
+
+
+#### DEPENDENCIES : 
+##### Prod : 
+* react-redux
+* redux
+
+##### Dev: 
+* reduxjs/toolkit
+* redux-devtools
+* npm install file-loader --save-dev
