@@ -8,16 +8,16 @@ L'objectif de ce projet est de réaliser pour ma mère un site web de cours info
 
 ## Technologies:
 ### FRONT:
-ReactJs & Redux, CSS3
-Rich-Text Editor: ckeditor 
+* ReactJs & Redux, CSS3
+* Rich-Text Editor: ckeditor 
  
  
  
 ### BACK:
-Jakarta EE 9
-JDK : 13.0.2
-Database : MySQL
-Server : Wildfly 22
+* Jakarta EE 9
+* JDK : 13.0.2
+* Database : MySQL
+* Server : Wildfly 22
  
 Tools : Vscode, Adobe Xd
 VCS : Git
@@ -25,7 +25,7 @@ VCS : Git
 
 
 #### STRUCTURE:
-organisation par fonctionnalités :
+- organisation par fonctionnalités :
 
 
 
