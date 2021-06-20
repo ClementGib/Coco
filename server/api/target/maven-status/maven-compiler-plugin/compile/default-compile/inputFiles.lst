@@ -1,1 +1,10 @@
-/mnt/s/Dropbox/Projet/Web_coco/V3/server/api/src/main/java/com/clement/gibert/coco/App.java
+/mnt/s/Dropbox/Projet/Web_coco/V3/server/api/src/main/java/com/clement/gibert/coco/api/page/Page.java
+/mnt/s/Dropbox/Projet/Web_coco/V3/server/api/src/main/java/com/clement/gibert/coco/api/account/Account.java
+/mnt/s/Dropbox/Projet/Web_coco/V3/server/api/src/main/java/com/clement/gibert/coco/api/history/History.java
+/mnt/s/Dropbox/Projet/Web_coco/V3/server/api/src/main/java/com/clement/gibert/coco/api/post/Post.java
+/mnt/s/Dropbox/Projet/Web_coco/V3/server/api/src/main/java/com/clement/gibert/coco/api/tutorial/Type.java
+/mnt/s/Dropbox/Projet/Web_coco/V3/server/api/src/main/java/com/clement/gibert/coco/api/page/PageService.java
+/mnt/s/Dropbox/Projet/Web_coco/V3/server/api/src/main/java/com/clement/gibert/coco/api/dictionary/Dictionary.java
+/mnt/s/Dropbox/Projet/Web_coco/V3/server/api/src/main/java/com/clement/gibert/coco/api/tutorial/TutorialService.java
+/mnt/s/Dropbox/Projet/Web_coco/V3/server/api/src/main/java/com/clement/gibert/coco/api/user/User.java
+/mnt/s/Dropbox/Projet/Web_coco/V3/server/api/src/main/java/com/clement/gibert/coco/api/tutorial/Tutorial.java

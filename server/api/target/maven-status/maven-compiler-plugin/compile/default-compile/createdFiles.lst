@@ -1,1 +1,10 @@
-com/clement/gibert/coco/App.class
+com/clement/gibert/coco/api/dictionary/Dictionary.class
+com/clement/gibert/coco/api/tutorial/Type.class
+com/clement/gibert/coco/api/user/User.class
+com/clement/gibert/coco/api/tutorial/Tutorial.class
+com/clement/gibert/coco/api/page/PageService.class
+com/clement/gibert/coco/api/tutorial/TutorialService.class
+com/clement/gibert/coco/api/page/Page.class
+com/clement/gibert/coco/api/history/History.class
+com/clement/gibert/coco/api/account/Account.class
+com/clement/gibert/coco/api/post/Post.class

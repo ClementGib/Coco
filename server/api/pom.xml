@@ -7,12 +7,14 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.clement.gibert.coco</groupId>
-  <artifactId>api</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+    <artifactId>coco-api</artifactId>
+    <groupId>com.clement.gibert.coco.api</groupId>
+    <version>0.0.1-SNAPSHOT</version>
 
-  <name>api</name>
+  <name>coco - api</name>
   <url>http://www.clement-gibert.com/</url>
+
+  <packaging>jar</packaging> 
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
