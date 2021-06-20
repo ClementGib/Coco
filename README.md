@@ -8,15 +8,16 @@ L'objectif de ce projet est de réaliser pour ma mère un site web de cours info
 
 ## Technologies:
 ### FRONT:
-Design : ReactJs Redux, CSS3
+ReactJs & Redux, CSS3
 Rich-Text Editor: ckeditor 
  
  
  
 ### BACK:
-Language: Js, React ?
-BDD: MySQL
-Serveur web: Apache ou Nginx ?
+Jakarta EE 9
+JDK : 13.0.2
+Database : MySQL
+Server : Wildfly 22
  
 Tools : Vscode, Adobe Xd
 VCS : Git
