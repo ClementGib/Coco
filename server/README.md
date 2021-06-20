@@ -46,8 +46,60 @@ sudo dpkg -i jdk-13.0.2_linux-x64_bin.deb
 2. Mise en place et tests du server
 ```bash
 unzip server
-$ ./wildfly-22.0.0.Final/bin/add-user.sh -u 'NAME_USER' -p 'PASSWORD!' 
+
+./wildfly-22.0.0.Final/bin/add-user.sh -u 'admin' -p 'PASSWORD!'
+
+#OR
+
+add-user.sh
+
+What type of user do you wish to add? 
+ a) Management User (mgmt-users.properties) 
+ b) Application User (application-users.properties)
+(a): a
+
+Enter the details of the new user to add.
+Using realm 'ManagementRealm' as discovered from the existing property files.
+Username : admin
+User 'admin' already exists and is enabled, would you like to... 
+ a) Update the existing user password and roles 
+ b) Disable the existing user 
+ c) Type a new username
+(a): a
+Password recommendations are listed below. To modify these restrictions edit the add-user.properties configuration file.
+ - The password should be different from the username
+ - The password should not be one of the following restricted values {root, admin, administrator}
+ - The password should contain at least 8 characters, 1 alphabetic character(s), 1 digit(s), 1 non-alphanumeric symbol(s)
+...
+
+./standalone.sh
 ```
+Accèder à l'interface web : http://127.0.0.1:9990/
+<br>
+2. Installation Mysql :
+Télécharger le Connector/J
+ajouter le connecteur au modules du server : /
+```bash
+mkdir -p wildfly-22.0.0.Final/modules/system/layers/base/com/mysql/main
+mv mysql-connector-java-8.0.25.jar wildfly-22.0.0.Final/modules/system/layers/base/com/mysql/main/
+touch mysql-connector-java-8.0.25.jar wildfly-22.0.0.Final/modules/system/layers/base/com/mysql/main/module.xml
+```
+<br>
+ajouter au module.xml :
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.5" name="com.mysql">
+    <resources>
+        <resource-root path="mysql-connector-java-8.0.25.jar" />
+    </resources>
+    <dependencies>
+        <module name="javax.api"/>
+        <module name="javax.transaction.api"/>
+    </dependencies>
+</module>
+```
+
+ajouter le module depuis l'interface web et se connecter.
 
 2. Installation postegre SQL, démarrage et vérification:
 ```bash
