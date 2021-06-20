@@ -7,6 +7,7 @@ import Logo from '../../assets/icons/logo-white.svg'
 import Search from '../../assets/icons/search-grey.svg'
 
 export default function Header () {
+
   return (
     <div>
       <header className='main-head'>
