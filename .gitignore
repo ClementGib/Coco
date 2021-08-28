@@ -1,3 +1,5 @@
 .vscode
 .vscode/*
 .vscode/launch.json
+docker/wildfly22/jdk-13.0.2
+docker/wildfly22/wildfly-22.0.0.Final-Coco

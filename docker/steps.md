@@ -39,7 +39,7 @@ __Change password after__ : "my-email@gmail.com" ➡️ Change password
 
 <br>
 
-### Wildfly server ☕
+### Wildfly 22.0.0 server ☕
 📁 into the "docker" directory
 
 ```bash 
@@ -48,4 +48,33 @@ docker build -t wildfly22 wildfly22/
 docker run -p 8180:8080 --name wildflycoco -d wildfly22
 #expose web application & wildfly admin interface 
 docker run -p 8180:8080 -p 9990:9990 --name wildflycoco -d wildfly22
+```
+
+**xa-datasource :**
+```xml
+<subsystem xmlns="urn:jboss:domain:datasources:6.0">
+    <datasources>
+        <xa-datasource jndi-name="java:jboss/jdbc/COCO_DS" pool-name="CocoDSDev" enabled="true" use-java-context="true" spy="true">
+            <xa-datasource-property name="ServerName">
+                <!--ip-->
+            </xa-datasource-property>
+            <xa-datasource-property name="PortNumber">
+                <!--port-->
+            </xa-datasource-property>
+            <xa-datasource-property name="DatabaseName">
+                <!--database-->
+            </xa-datasource-property>
+            <driver>postgresql</driver>
+            <transaction-isolation>TRANSACTION_REPEATABLE_READ</transaction-isolation>
+            <security>
+                <user-name><!--user--></user-name>
+                <password><!--password--></PASSWORD>
+            </security>
+            <validation>
+                <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker"/>
+                <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLExceptionSorter"/>
+            </validation>
+        </xa-datasource>
+    </datasources>
+</subsystem>
 ```

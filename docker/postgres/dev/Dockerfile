@@ -1,4 +1,3 @@
-#MAINTAINER Clement Gibert <c.gibertpro@gmail.com>
 #DEV
 
 #Dowload image Wildfly
