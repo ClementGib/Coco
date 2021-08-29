@@ -2,42 +2,38 @@
 
 1. Création du pom.xml parent:
 ```bash
-mvn archetype:generate -DgroupId=com.clement.gibert.coco -DartifactId=coco-back
+mvn archetype:generate -DgroupId=com.clement.xcg.coco -DartifactId=coco-back
 ```
 
 ```xml
 
   <groupId>com.clement.gibert</groupId>
-  <artifactId>coco</artifactId>
+  <artifactId>coco-back</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>coco</name>
+  <name>coco-back</name>
   <url>http://www.clement-gibert.com/</url>
 
 
 <packaging>pom</packaging>
 
-<!-- <modules>
-	<module>api</module>
-	<module>ws</module>
-	<module>service</module>
-	<module>deploy</module>
-</modules> -->
+<modules>
+	<module>core</module>
+	<module>tools</module>
+</modules>
 
 ```
 
 2. Création des modules maven :
 ```bash
 cd coco-back
-mvn archetype:generate -DgroupId=com.clement.gibert.coco  -DartifactId=api
-mvn archetype:generate -DgroupId=com.clement.gibert.coco  -DartifactId=ws
-mvn archetype:generate -DgroupId=com.clement.gibert.coco -DartifactId=service
-mvn archetype:generate -DgroupId=com.clement.gibert.coco -DartifactId=deploy
+mvn archetype:generate -DgroupId=com.xcg.coco  -DartifactId=core
+mvn archetype:generate -DgroupId=com.xcg.coco  -DartifactId=tools
 ```
 
-## Procedure server:
+## Procedure server (PROD):
 
-1. Installation JDK
+1. installation du JDK
 ```bash
 sudo dpkg -i jdk-13.0.2_linux-x64_bin.deb
 ```

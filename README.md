@@ -6,29 +6,28 @@
 
 
 ## Technologies: ✨
+
+**RESTfull web service architecture :**
+- Java API (backend)
+- React web app (frontend)
 ### Front: 🖥️ 
 * ReactJs & Redux, CSS3
 * Rich-Text Editor: ckeditor 
  
  
- 
 ### Back: ⚙️
 * Jakarta EE 9
 * JDK : 13.0.2
-* Database : MySQL
+* Database : Postesql
 * Server : Wildfly 22
  
-**Architecture :**:
-* Microservice
 
 ### Tools :🧰 
 Vscode, Eclipse, Docker, Adobe Xd, Maven, Git, WSL
 
 
 
-
-
-**Dépendences :**
+**npm dependencies :**
 Prod : 
 * react-redux
 * redux

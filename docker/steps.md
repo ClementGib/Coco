@@ -1,5 +1,11 @@
 ## <u> Docker steps</u> 🐋
+
 <p>Steps to launch all the containers usefull. Don't forget to securise them !</p>
+
+#### requirement :
+- jdk-13.0.2
+- wildfly-22.0.0.Final
+
 <br>
 
 
