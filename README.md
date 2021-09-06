@@ -16,8 +16,9 @@
  
  
 ### Back: ⚙️
-* Jakarta EE 9
+* JEE version : Jakarta EE 9
 * JDK : 13.0.2
+* Maven : Single module project (make it simple)
 * Database : Postesql
 * Server : Wildfly 22
  
