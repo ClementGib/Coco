@@ -10,8 +10,8 @@
 	</parent>
 
 	<artifactId>core</artifactId>
-	<groupId>com.xcg.coco.core</groupId>
-	<name>coco-core</name>
+	<groupId>com.xcg.coco.service</groupId>
+	<name>coco-service</name>
 	<url>http://www.clement-gibert.com/</url>
 
 	<packaging>war</packaging>

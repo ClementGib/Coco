@@ -11,15 +11,8 @@
 
 	<artifactId>tools</artifactId>
 	<groupId>com.xcg.coco.tools</groupId>
-	<name>coco - tools</name>
+	<name>coco-tools</name>
 	<url>http://www.clement-gibert.com</url>
 
 	<packaging>pom</packaging>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
-
 </project>

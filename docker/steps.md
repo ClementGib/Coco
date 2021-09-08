@@ -19,7 +19,7 @@ docker build -t postgres-test test/
 docker run -p 5431:5432/tcp --name postgres-coco-test -e POSTGRES_PASSWORD=<my-password> -d postgres-test
 ```
 
-__Change password after__ : Login/Group Roles ➡️ Properties➡️  Definition ➡️ Password
+__To change password__ : Login/Group Roles ➡️ Properties➡️  Definition ➡️ Password
 ⚠️<span style="color:red">Container database for production is not recommended.</span>⚠️
 
 Servers are accessible with **pgAdmin** or **postgresql-client**:
@@ -35,7 +35,7 @@ from *dpage/pgadmin*
 docker run -p 8081:80 -e 'PGADMIN_DEFAULT_EMAIL=<my-email>' -e 'PGADMIN_DEFAULT_PASSWORD=<my-password>' -d --name=ui-pgadmin dpage/pgadmin4
 ```
 
-__Change password after__ : "my-email@gmail.com" ➡️ Change password
+__To change password__ : "my-email@gmail.com" ➡️ Change password
 
 <p>pgAdmin is accessible with localhost:8080</p>
 
@@ -56,7 +56,7 @@ docker run -p 8180:8080 --name wildflycoco -d wildfly22
 docker run -p 8180:8080 -p 9990:9990 --name wildflycoco -d wildfly22
 ```
 
-**xa-datasource :**
+**standalone.xml :** xa-datasource
 ```xml
 <subsystem xmlns="urn:jboss:domain:datasources:6.0">
     <datasources>

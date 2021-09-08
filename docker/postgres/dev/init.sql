@@ -26,7 +26,6 @@ SET search_path TO cocoapp;
 -- CREATE users TABLE --
 	CREATE TABLE cocoapp.users
 (
-	user_id BIGSERIAL NOT NULL,
 	username varchar(255) NOT NULL,
 	password text NOT NULL,
 	admin boolean NOT NULL,
@@ -34,7 +33,7 @@ SET search_path TO cocoapp;
 	history jsonb NOT NULL,
 	birthday DATE NOT NULL,
 	creation_date timestamp NOT NULL,
-	PRIMARY KEY (user_id)
+	PRIMARY KEY (username)
 	);
 	
 	
@@ -42,11 +41,12 @@ SET search_path TO cocoapp;
 	CREATE TABLE cocoapp.comments
 (
 	comment_id BIGSERIAL NOT NULL,
-	user_id bigint NOT NULL,
 	tutorial_id bigint NOT NULL,
+	user_id bigint NOT NULL,
 	content text NOT NULL,
+	creation_date timestamp NOT NULL,
 	PRIMARY KEY (comment_id),
-	CONSTRAINT comments_users_queue_fkey FOREIGN KEY(user_id) REFERENCES cocoapp.users(user_id)
+	CONSTRAINT fk_comments FOREIGN KEY(tutorial_id) REFERENCES cocoapp.users(tutorial_id)
 	);
 
 -- CREATE categories TABLE --
