@@ -17,10 +17,10 @@
  
 ### Back: ⚙️
 * JEE version : Jakarta EE 9
-* JDK : 13.0.2
+* JDK : jdk-11.0.10
 * Maven : Multi-Module project
 * Database : Postesql
-* Server : Wildfly 22
+* Server : Jboss Wildfly 23
  
 
 ### Tools :🧰 
