@@ -1,7 +1,7 @@
 # Web app coco 📘 
 
 
-## Context 🔦
+## Context: 🔦
 *L'objectif de ce projet est de réaliser une web application de cours particuliers. Cette application permettra à mes proches d'apprendre de nouvelles choses liées à l'informatique et de réviser les formations eu ensemble.*
 
 
@@ -23,7 +23,7 @@
 * Server : Jboss Wildfly 23
  
 
-### Tools :🧰 
+### Tools: 🧰 
 Vscode, Eclipse, Docker, Adobe Xd, Maven, Git, WSL
 
 

@@ -94,11 +94,7 @@ public class UserEntity {
 		this.creationDate = creationDate;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(username, admin, birthday, creationDate, email, history, password);
-	}
-
+	//Ne pas surcharger ?
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

@@ -80,8 +80,16 @@ public class User {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(username, admin, birthday, creationDate, email, history, password);
-	}
+		int result;
+		result = 31 * result + username.hashCode();
+		result = 31 * result + password.hashCode();
+		result = 31 * result + email.hashCode();
+		result = 31 * result + history.hashCode();
+		result = 31 * result + birthday.hashCode();
+		result = 31 * result + creationDate.hashCode();
+		result = 31 * result + admin.hashCode();
+		return result;
+}
 
 	@Override
 	public boolean equals(Object obj) {
