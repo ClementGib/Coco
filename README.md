@@ -1,4 +1,7 @@
-# Web app coco 📘 
+# Web app coco <img src="./design/images/java.svg" width="60"> <img src="./design/images/react.svg" width="60"> 
+
+
+
 
 
 ## Context: 🔦
@@ -10,6 +13,8 @@
 **RESTfull web service architecture :**
 - Java API (backend)
 - React web app (frontend)
+
+
 ### Front: 🖥️ 
 * ReactJs & Redux, CSS3
 * Rich-Text Editor: ckeditor 
