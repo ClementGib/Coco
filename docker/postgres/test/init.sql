@@ -18,6 +18,7 @@ CREATE SCHEMA cocoapp;
 GRANT ALL ON DATABASE cocotuto TO cocoadm;
 GRANT ALL ON SCHEMA cocoapp TO cocoadm;
 
+
 -- SET DEFAULT SCHEMA --
 SET search_path TO cocoapp;
 
@@ -26,7 +27,6 @@ SET search_path TO cocoapp;
 -- CREATE users TABLE --
 	CREATE TABLE cocoapp.users
 (
-	user_id BIGSERIAL NOT NULL,
 	username varchar(255) NOT NULL,
 	password text NOT NULL,
 	admin boolean NOT NULL,
@@ -34,19 +34,19 @@ SET search_path TO cocoapp;
 	history jsonb NOT NULL,
 	birthday DATE NOT NULL,
 	creation_date timestamp NOT NULL,
-	PRIMARY KEY (user_id)
+	PRIMARY KEY (username)
 	);
-	
 	
 -- CREATE comments TABLE --
 	CREATE TABLE cocoapp.comments
 (
 	comment_id BIGSERIAL NOT NULL,
-	user_id bigint NOT NULL,
 	tutorial_id bigint NOT NULL,
+	user_username varchar(255) NOT NULL,
 	content text NOT NULL,
+	creation_date timestamp NOT NULL,
 	PRIMARY KEY (comment_id),
-	CONSTRAINT comments_users_queue_fkey FOREIGN KEY(user_id) REFERENCES cocoapp.users(user_id)
+	CONSTRAINT fk_comments_users FOREIGN KEY(user_username) REFERENCES cocoapp.users(username)
 	);
 
 -- CREATE categories TABLE --
@@ -119,6 +119,10 @@ SET search_path TO cocoapp;
 	);
 	
 	
+-- GRANT cocoadm -- 
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cocoapp TO cocoadm;	
+GRANT SELECT, UPDATE, USAGE ON ALL SEQUENCES IN SCHEMA cocoapp to cocoadm;
+
 -- GRANT cocoweb --
 GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE comments TO cocoweb;
 GRANT SELECT, UPDATE, USAGE ON "comments_comment_id_seq" TO cocoweb;
