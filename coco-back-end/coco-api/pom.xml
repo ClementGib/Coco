@@ -11,7 +11,6 @@
 
 	<artifactId>coco-api</artifactId>
 	<name>coco-api</name>
-	<version>0.0.1</version>
 	<url>http://www.clement-gibert.com/</url>
 
 	<packaging>ejb</packaging>
@@ -25,6 +24,15 @@
 				<configuration>
 					<!-- Tell Maven we are using EJB 3.1 -->
 					<ejbVersion>3.1</ejbVersion>
+					<useCache>true</useCache>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+						<manifestEntries>
+							<Implementation-Build>${buildNumber}</Implementation-Build>
+						</manifestEntries>
+					</archive>
 				</configuration>
 			</plugin>
 		</plugins>

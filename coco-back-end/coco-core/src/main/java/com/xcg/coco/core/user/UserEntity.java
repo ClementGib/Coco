@@ -1,18 +1,36 @@
 package com.xcg.coco.core.user;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 
+import com.vladmihalcea.hibernate.type.json.JsonType;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 @Entity
-@Table(name = "users")
-public class UserEntity {
+@Table(schema = "cocoapp", name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "username"))
+@TypeDef(name = "jsonb", typeClass = JsonType.class)
+public class UserEntity implements Serializable {
+
+	/**
+	 * V0.0.1
+	 */
+	private static final long serialVersionUID = 6644713357542923727L;
 
 	@Id
 	@Column(name = "username", nullable = false)
@@ -21,13 +39,14 @@ public class UserEntity {
 	@Column(name = "password", nullable = false)
 	private String password;
 
-	@Column(name = "admin", nullable = false)
-	private boolean admin;
+	@Enumerated(EnumType.STRING)
+	@Column(name = "role", nullable = false)
+	private Role role;
 
 	@Column(name = "email", nullable = false)
 	private String email;
 
-	@Type(type = "json")
+	@Type(type = "jsonb")
 	@Column(name = "history", columnDefinition = "jsonb")
 	private String history;
 
@@ -36,61 +55,4 @@ public class UserEntity {
 
 	@Column(name = "creation_date", nullable = false)
 	private Instant creationDate;
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public boolean isAdmin() {
-		return admin;
-	}
-
-	public void setAdmin(boolean admin) {
-		this.admin = admin;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getHistory() {
-		return history;
-	}
-
-	public void setHistory(String history) {
-		this.history = history;
-	}
-
-	public LocalDate getBirthday() {
-		return birthday;
-	}
-
-	public void setBirthday(LocalDate birthday) {
-		this.birthday = birthday;
-	}
-
-	public Instant getCreationDate() {
-		return creationDate;
-	}
-
-	public void setCreationDate(Instant creationDate) {
-		this.creationDate = creationDate;
-	}
-
 }

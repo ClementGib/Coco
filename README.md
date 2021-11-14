@@ -11,21 +11,21 @@
 ## Technologies: ✨
 
 **RESTfull web service architecture :**
-- Java API (backend)
-- React web app (frontend)
+- **Java APIs (backend)**
+- **React web app (frontend)**
 
 
 ### Front: 🖥️ 
-* ReactJs & Redux, CSS3
-* Rich-Text Editor: ckeditor 
+* **ReactJs/Redux, CSS3**
+* **Rich-Text Editor:** ckeditor 
  
  
 ### Back: ⚙️
-* JEE version : Jakarta EE 9
-* JDK : jdk-11.0.10
-* Maven : Multi-Module project
-* Database : Postesql
-* Server : Jboss Wildfly 23
+* **Java version :** Jakarta EE 8 & Java 11
+* **JDK :** OpenJDK 11 (VM 18.9)
+* **Maven :** Multi-Module project
+* **Database :** Postesql
+* **Server :** Jboss Wildfly 23.0.2
  
 
 ### Tools: 🧰 
