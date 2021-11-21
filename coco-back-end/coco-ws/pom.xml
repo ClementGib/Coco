@@ -11,7 +11,6 @@
 
 	<artifactId>coco-ws</artifactId>
 	<name>coco-ws</name>
-	<version>0.0.1</version>
 	<url>http://www.clement-gibert.com/</url>
 
 	<packaging>ejb</packaging>
@@ -29,6 +28,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>

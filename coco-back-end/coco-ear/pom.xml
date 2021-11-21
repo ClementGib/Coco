@@ -7,11 +7,11 @@
 		<artifactId>coco-back-end</artifactId>
 		<groupId>com.xcg.coco</groupId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<artifactId>coco-ear</artifactId>
 	<name>coco-ear</name>
-	<version>0.0.1</version>
 	<url>http://www.clement-gibert.com</url>
 
 	<packaging>ear</packaging>
@@ -20,18 +20,43 @@
 		<dependency>
 			<groupId>com.xcg.coco</groupId>
 			<artifactId>coco-core</artifactId>
-			<version>0.0.1</version>
+			<type>ejb</type>
 		</dependency>
 		<dependency>
 			<groupId>com.xcg.coco</groupId>
 			<artifactId>coco-api</artifactId>
-			<version>0.0.1</version>
+			<type>ejb</type>
 		</dependency>
-		<dependency>
-			<groupId>com.xcg.coco</groupId>
-			<artifactId>coco-ws</artifactId>
-			<version>0.0.1</version>
-		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>com.xcg.coco</groupId> -->
+		<!-- <artifactId>coco-ws</artifactId> -->
+		<!-- <type>war</type> -->
+		<!-- </dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-commons-annotations -->
 
 	</dependencies>
+
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<version>8</version>
+					<!-- Default folder for external libs -> lib folder -->
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<!-- Tell Maven we are using EJB 3.1 -->
+					<ejbVersion>3.1</ejbVersion>
+					<outputFileNameMapping>@{artifactId}@.@{extension}@</outputFileNameMapping>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>

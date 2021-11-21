@@ -1,12 +1,3 @@
--- CREATE USERS --
-CREATE USER cocoadm WITH PASSWORD 'postgres';
-CREATE USER cocoweb WITH PASSWORD 'postgres';
-
--- CREATE DATABASE --
-CREATE DATABASE cocotuto;
-
--- SELECT DATABASE --
-\c cocotuto
 
 -- CREATE EXTENSION --
 CREATE EXTENSION pgcrypto;
@@ -124,24 +115,11 @@ CREATE TYPE role_type AS ENUM (
 	description text NOT NULL,
 	CONSTRAINT pk_ids PRIMARY KEY (origin)
 	);
-	
-	
--- GRANT cocoadm -- 
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cocoapp TO cocoadm;	
-GRANT SELECT, UPDATE, USAGE ON ALL SEQUENCES IN SCHEMA cocoapp to cocoadm;
 
--- GRANT cocoweb --
-GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE comments TO cocoweb;
-GRANT SELECT, UPDATE, USAGE ON "comments_comment_id_seq" TO cocoweb;
 
-GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE tutorials TO cocoweb;
-GRANT SELECT, UPDATE, USAGE ON "tutorials_tutorial_id_seq" TO cocoweb;
+-- REMOVE DATABASE --
+CREATE DATABASE cocotuto;
 
-GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE pages TO cocoweb;
-GRANT SELECT, UPDATE, USAGE ON "pages_page_id_seq" TO cocoweb;
-
-GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE posts TO cocoweb;
-GRANT SELECT, UPDATE, USAGE ON "posts_post_id_seq" TO cocoweb;
-
-GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE categories TO cocoweb;
-GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE dictionnaries TO cocoweb;
+-- REMOVE USERS --
+CREATE USER cocoadm WITH PASSWORD 'postgres';
+CREATE USER cocoweb WITH PASSWORD 'postgres';
