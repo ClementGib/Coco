@@ -47,8 +47,8 @@ CREATE TYPE role_type AS ENUM (
 -- CREATE comments TABLE --
 	CREATE TABLE cocoapp.comments
 (
-	comment_id BIGSERIAL NOT NULL,
-	tutorial_id bigint NOT NULL,
+	comment_id SERIAL NOT NULL,
+	tutorial_id integer NOT NULL,
 	user_username varchar(255) NOT NULL,
 	content text NOT NULL,
 	creation_date timestamp NOT NULL,
@@ -59,50 +59,50 @@ CREATE TYPE role_type AS ENUM (
 -- CREATE categories TABLE --
 	CREATE TABLE cocoapp.categories
 (
-	name text NOT NULL UNIQUE
+	name varchar(255) NOT NULL UNIQUE,
+	description text NOT NULL,
+	CONSTRAINT pk_categories PRIMARY KEY (name)
 	);
 	
 -- CREATE tutorials TABLE --
 	CREATE TABLE cocoapp.tutorials
 (
-	tutorial_id BIGSERIAL NOT NULL,
+	tutorial_id SERIAL NOT NULL,
 	title varchar(255) NOT NULL,
-	category varchar(255) NOT NULL,
+	category_name varchar(255) NOT NULL,
 	author varchar(255) NOT NULL,
 	description text NOT NULL,
 	image_name varchar(255),
-	liked integer NOT NULL,
-	last bigint references cocoapp.tutorials(tutorial_id),
-	next bigint references cocoapp.tutorials(tutorial_id),
+	like_count integer NOT NULL,
 	CONSTRAINT pk_tutorials PRIMARY KEY (tutorial_id),
-	CONSTRAINT fk_tutorials FOREIGN KEY(category) REFERENCES cocoapp.categories(name)
+	CONSTRAINT fk_tutorials_categories FOREIGN KEY(category_name) REFERENCES cocoapp.categories(name)
 	);
 
 -- CREATE pages TABLE --
 	CREATE TABLE cocoapp.pages
 	(
-	page_id BIGSERIAL NOT NULL, 
-	page_nb integer NOT NULL,
-	tutorial bigint NOT NULL,
+	page_id SERIAL NOT NULL, 
+	position integer NOT NULL,
+	tutorial_id integer NOT NULL,
 	title text NOT NULL,
 	creation_date timestamp NOT NULL,
 	update_date timestamp NOT NULL,
 	CONSTRAINT pk_pages PRIMARY KEY (page_id),
-	CONSTRAINT fk_pages FOREIGN KEY(tutorial) REFERENCES cocoapp.tutorials(tutorial_id)
+	CONSTRAINT fk_pages_tutorials FOREIGN KEY(tutorial_id) REFERENCES cocoapp.tutorials(tutorial_id)
 	);
 	
 -- CREATE posts TABLE --
 	CREATE TABLE cocoapp.posts
 	(
-	post_id BIGSERIAL NOT NULL,
-	post_nb integer NOT NULL,
-	page bigint NOT NULL,
+	post_id SERIAL NOT NULL,
+	position integer NOT NULL,
+	page_id integer NOT NULL,
 	title text NOT NULL,
 	content text NOT NULL,
 	creation_date timestamp NOT NULL,
 	update_date timestamp NOT NULL,
 	CONSTRAINT pk_posts PRIMARY KEY (post_id),
-	CONSTRAINT fk_posts FOREIGN KEY(page) REFERENCES cocoapp.pages(page_id)
+	CONSTRAINT fk_posts_pages FOREIGN KEY(page_id) REFERENCES cocoapp.pages(page_id)
 	);
 	
 -- CREATE dictionnaries TABLE --
@@ -119,7 +119,7 @@ CREATE TYPE role_type AS ENUM (
 	(
 	origin varchar(255) NOT NULL UNIQUE,
 	username text NOT NULL,
-	email text NOT NULL,
+	email varchar(255) NOT NULL,
 	password text NOT NULL,
 	description text NOT NULL,
 	CONSTRAINT pk_ids PRIMARY KEY (origin)

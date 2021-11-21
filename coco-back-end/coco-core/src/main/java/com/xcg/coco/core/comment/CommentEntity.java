@@ -20,10 +20,10 @@ public class CommentEntity implements Serializable {
 
 	@Id
 	@Column(name = "comment_id", nullable = false)
-	private long commentId;
+	private Integer commentId;
 
 	@Column(name = "tutorial_id", nullable = false)
-	private long tutorialId;
+	private Integer tutorialId;
 
 	@Column(name = "user_username", nullable = false)
 	private String userUsername;
@@ -33,44 +33,4 @@ public class CommentEntity implements Serializable {
 
 	@Column(name = "creation_date", nullable = false)
 	private Instant creationDate;
-
-	public long getCommentId() {
-		return commentId;
-	}
-
-	public void setCommentId(long commentId) {
-		this.commentId = commentId;
-	}
-
-	public long getTutorialId() {
-		return tutorialId;
-	}
-
-	public void setTutorialId(long tutorialId) {
-		this.tutorialId = tutorialId;
-	}
-
-	public String getUserUsername() {
-		return userUsername;
-	}
-
-	public void setUserUsername(String userUsername) {
-		this.userUsername = userUsername;
-	}
-
-	public String getContent() {
-		return content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-
-	public Instant getCreationDate() {
-		return creationDate;
-	}
-
-	public void setCreationDate(Instant creationDate) {
-		this.creationDate = creationDate;
-	}
 }
