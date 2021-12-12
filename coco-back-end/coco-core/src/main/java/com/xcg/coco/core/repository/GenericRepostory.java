@@ -1,4 +1,4 @@
-package com.xcg.coco.core.dao;
+package com.xcg.coco.core.repository;
 
 import java.io.Serializable;
 import java.util.List;
@@ -13,7 +13,7 @@ import org.hibernate.Session;
  * @param <T> object type
  * @param <I> id type
  */
-public interface GenericDao<T, PK extends Serializable> {
+public interface GenericRepostory<T, PK extends Serializable> {
 
 	/**
 	 * Create an entity object <T> into the database

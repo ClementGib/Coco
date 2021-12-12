@@ -1,4 +1,4 @@
-package com.xcg.coco.core.dao;
+package com.xcg.coco.core.repository;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -10,7 +10,7 @@ import javax.persistence.PersistenceContext;
 
 import org.hibernate.Session;
 
-public abstract class GenericBaseDao<T, PK extends Serializable> implements GenericDao<T, PK>{
+public abstract class GenericBaseRepository<T, PK extends Serializable> implements GenericRepostory<T, PK>{
 	
 	private Class<T> persistentClass;
 	
@@ -18,7 +18,7 @@ public abstract class GenericBaseDao<T, PK extends Serializable> implements Gene
 	private EntityManager entityManager;
 	
 	@SuppressWarnings("unchecked")
-	public GenericBaseDao() {
+	public GenericBaseRepository() {
 		this.persistentClass = (Class<T>) ((ParameterizedType) getClass()
 				.getGenericSuperclass())
 				.getActualTypeArguments()[0];
