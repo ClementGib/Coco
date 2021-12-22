@@ -22,14 +22,29 @@ GRANT ALL ON SCHEMA cocoapp TO cocoadm;
 -- SET DEFAULT SCHEMA --
 SET search_path TO cocoapp;
 
--- CREATE ENUM --
+-- CREATE role_type ENUM --
 CREATE TYPE role_type AS ENUM (
-    'USER', 
-    'ADMIN', 
-    'GUEST'
+	'GUEST',
+    'USER',
+	'CONTRIBUTOR',
+	'EDITOR',
+    'ADMIN',
+	'SUPERADMIN'
 );
 
 -- CREATE TABLES --
+
+-- CREATE clients TABLE --
+	CREATE TABLE cocoapp.clients
+(
+	client_id SERIAL NOT NULL,
+	client_secret text NOT NULL,
+	redirect_uri text NOT NULL,
+	scope text NOT NULL,
+	authorized_grant_types text NOT NULL,
+	PRIMARY KEY (client_id)
+	);
+
 
 -- CREATE users TABLE --
 	CREATE TABLE cocoapp.users
@@ -41,6 +56,8 @@ CREATE TYPE role_type AS ENUM (
 	history jsonb NOT NULL,
 	birthday DATE NOT NULL,
 	creation_date timestamp NOT NULL,
+	enabled boolean NOT NULL,
+	locked boolean NOT NULL,
 	PRIMARY KEY (username)
 	);
 	

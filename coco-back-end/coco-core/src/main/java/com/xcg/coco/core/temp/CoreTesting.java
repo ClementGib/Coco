@@ -1,5 +1,7 @@
 package com.xcg.coco.core.temp;
 
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.Optional;
 
 import javax.annotation.PostConstruct;
@@ -11,34 +13,45 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.xcg.coco.core.category.CategoryEntity;
-import com.xcg.coco.core.category.CategoryRepository;
+import com.xcg.coco.core.user.Role;
+import com.xcg.coco.core.user.UserEntity;
+import com.xcg.coco.core.user.UserRepository;
 
 
-
+/***
+ * Temp core testing class (until APIs are done)
+ * @author Clément Gibert
+ *
+ */
 @Startup
 @Singleton
-public class CoreTesting {
+public
+ class CoreTesting {
 	
 	@Inject
-	CategoryRepository categoryRepository;
+	UserRepository userRepository;
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(CoreTesting.class);
 
 	@PostConstruct
 	public void init() {
 		try {
-			CategoryEntity firstEntity = new CategoryEntity();
-			firstEntity.setName("java");
-			firstEntity.setDescription("test");
+			UserEntity firstEntity = new UserEntity();
+			firstEntity.setUsername("Clement");
+			firstEntity.setPassword("azerty");
+			firstEntity.setRole(Role.ADMIN);
+			firstEntity.setEmail("test@gmail.com");
+			firstEntity.setHistory("{}");
+			firstEntity.setBirthday(LocalDate.of(2000, 10, 10));
+			firstEntity.setCreationDate(Instant.now());
 			
-			categoryRepository.add(firstEntity);
-			LOGGER.info(firstEntity.getName() + " pesisted");
-			Optional<CategoryEntity> category = categoryRepository.findById("Java");
+			userRepository.add(firstEntity);
+			LOGGER.info(firstEntity.getUsername() + " pesisted");
+			Optional<UserEntity> category = userRepository.findById("Clement");
 			
 			if(category.isPresent()) {
 				LOGGER.info("found :" + category.get());
-				LOGGER.info("found :" + category.get().getDescription());
+				LOGGER.info("found :" + category.get().getPassword());
 			}
 			
 		} catch (Exception Exception) {

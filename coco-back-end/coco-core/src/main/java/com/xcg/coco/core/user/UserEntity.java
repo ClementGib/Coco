@@ -15,6 +15,7 @@ import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
+import com.vladmihalcea.hibernate.type.basic.PostgreSQLEnumType;
 import com.vladmihalcea.hibernate.type.json.JsonType;
 
 import lombok.Getter;
@@ -24,6 +25,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(schema = "cocoapp", name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "username"))
+@TypeDef(name = "pgsql_role_type", typeClass = PostgreSQLEnumType.class)
 @TypeDef(name = "jsonb", typeClass = JsonType.class)
 public class UserEntity implements Serializable {
 
@@ -40,7 +42,8 @@ public class UserEntity implements Serializable {
 	private String password;
 
 	@Enumerated(EnumType.STRING)
-	@Column(name = "role", nullable = false)
+	@Type(type = "pgsql_role_type")
+	@Column(name = "role", columnDefinition = "role_type", nullable = false)
 	private Role role;
 
 	@Column(name = "email", nullable = false)
@@ -55,4 +58,10 @@ public class UserEntity implements Serializable {
 
 	@Column(name = "creation_date", nullable = false)
 	private Instant creationDate;
+	
+	@Column(name = "enabled", nullable = false)
+	private Boolean enabled;
+	
+	@Column(name = "locked", nullable = false)
+	private Boolean locked; 
 }
