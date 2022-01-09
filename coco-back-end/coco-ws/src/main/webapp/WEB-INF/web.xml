@@ -13,6 +13,7 @@
 		</web-resource-collection>
 	</security-constraint>
 
+	<!-- TODO : SECURITY ROLE -->
 	<!-- <security-constraint> -->
 	<!-- <web-resource-collection> -->
 	<!-- <web-resource-name>api</web-resource-name> -->
@@ -28,9 +29,9 @@
 	<!-- <role-name>ADMIN</role-name> -->
 	<!-- </security-role> -->
 
-	<!-- <context-param> -->
-	<!-- <param-name>resteasy.role.based.security</param-name> -->
-	<!-- <param-value>true</param-value> -->
-	<!-- </context-param> -->
+	<context-param>
+		<param-name>resteasy.role.based.security</param-name>
+		<param-value>true</param-value>
+	</context-param>
 
 </web-app>

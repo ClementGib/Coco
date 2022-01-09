@@ -1,14 +1,6 @@
+openapi: 3.0.0
 prettyPrint: true
 cacheTTL: 0
 openAPI:
   server:
     - url: /coco
-info:
-  version: ${project.version}
-  title: Swagger Coco App Config File
-  description: 'This is a tutorial server.'
-  contact:
-    email: xcg.maintainer@gmail.com
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
