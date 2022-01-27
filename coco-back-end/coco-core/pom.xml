@@ -21,26 +21,6 @@
 			<artifactId>coco-api</artifactId>
 			<type>ejb</type>
 		</dependency>
-
-		<!-- EJB -->
-		<dependency>
-			<groupId>jakarta.ejb</groupId>
-			<artifactId>jakarta.ejb-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
-		<!-- CDI -->
-		<dependency>
-			<groupId>jakarta.enterprise</groupId>
-			<artifactId>jakarta.enterprise.cdi-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>jakarta.annotation</groupId>
-			<artifactId>jakarta.annotation-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
 		<!-- ~~~~~~~~~~~~~~~ -->
 		<!-- JPA & Hibernate -->
 		<!-- ~~~~~~~~~~~~~~~ -->
@@ -129,7 +109,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<scope>provided</scope>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>

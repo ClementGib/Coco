@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_9" version="3.0"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<!-- public API -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>public</web-resource-name>
+			<url-pattern>/openapi.json</url-pattern>
+			<url-pattern>/version</url-pattern>
+		</web-resource-collection>
+	</security-constraint>
+
+	<!-- TODO : SECURITY ROLE -->
+	<!-- <security-constraint> -->
+	<!-- <web-resource-collection> -->
+	<!-- <web-resource-name>api</web-resource-name> -->
+	<!-- <url-pattern>/*</url-pattern> -->
+	<!-- <http-method-omission>OPTIONS</http-method-omission> -->
+	<!-- </web-resource-collection> -->
+	<!-- <auth-constraint> -->
+	<!-- <role-name>ADMIN</role-name> -->
+	<!-- </auth-constraint> -->
+	<!-- </security-constraint> -->
+
+	<!-- <security-role> -->
+	<!-- <role-name>ADMIN</role-name> -->
+	<!-- </security-role> -->
+
+	<context-param>
+		<param-name>resteasy.role.based.security</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+</web-app>
