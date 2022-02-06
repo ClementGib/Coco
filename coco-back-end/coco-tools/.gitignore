@@ -3,3 +3,7 @@
 .settings
 .classpath
 */.settings/*
+*.zip
+*.rar
+*.jar
+*.deb
