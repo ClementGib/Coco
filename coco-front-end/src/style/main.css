@@ -194,6 +194,18 @@ header img {
   flex-direction: rows;
 }
 
+.admin-navbar {
+  display: flex;
+  flex: 1 1 12rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  height: 12rem;
+
+  margin-right: 11.5rem;
+}
+
 .profil-navbar {
   display: flex;
   flex: 1 1 12rem;
@@ -234,6 +246,10 @@ header img {
 
 .profil-navbar > div {
   width: 7rem;
+}
+
+.admin-navbar > div {
+  width: 8.5rem;
 }
 
 .disconnect-navbar > div {
