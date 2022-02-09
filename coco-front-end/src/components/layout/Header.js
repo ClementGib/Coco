@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import Admin from '../admin/Admin';
+import Admin from '../admin/Admin'
 
 import '../../style/main.css'
 import Logo from '../../assets/icons/logo-white.svg'
@@ -13,20 +13,19 @@ function Header () {
   const history = useHistory()
 
   const headerRedirection = () => {
-    let path = 'admin'
-    history.push(path)
+    history.push('/admin')
   }
 
   return (
     <div>
       <header className='main-head'>
         <nav className='navbar'>
-          <Router>
             <div className='container-navbar'>
               <img className='logo-navbar' src={Logo} alt='Logo' />
+
               <div className='cours-navbar'>
                 <button className='btn-navbar'>
-                <span>Cours</span>
+                  <span>Cours</span>
                 </button>
                 <div className='bar-navbar'></div>
               </div>
@@ -44,25 +43,21 @@ function Header () {
                 />
               </div>
 
+              {/* TODO Role management Profil/Admin */}
               <div className='block-navbar'>
-                {/* TODO only Admin users*/}
-                <div className='profil-navbar'>
-                <Link to={'/admin'} className="nav-link"> Admin
-                
-                </Link>
-                
-                  {/* <button onClick={headerRedirection} className='btn-navbar'> */}
-                    {/* <span>Admin</span> */}
-                  {/* </button> */}
-                  <div className='bar-navbar'></div>
-                </div>
+                  <div className='admin-navbar'>
+                    <button className='btn-navbar' onClick={headerRedirection}>
+                      <span>Admin</span>
+                    </button>
+                    <div className='bar-navbar'></div>
+                  </div>
 
-                <div className='profil-navbar'>
+                {/* <div className='profil-navbar'>
                   <button className='btn-navbar'>
                     <span>Profil</span>
                   </button>
                   <div className='bar-navbar'></div>
-                </div>
+                </div> */}
 
                 <div className='disconnect-navbar'>
                   <button className='btn-navbar'>
@@ -71,11 +66,7 @@ function Header () {
                   <div className='bar-navbar'></div>
                 </div>
               </div>
-              <Switch>
-              <Route exact path='/admin' component={Admin} />
-          </Switch>
             </div>
-          </Router>
         </nav>
       </header>
 
