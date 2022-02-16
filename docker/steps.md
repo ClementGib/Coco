@@ -37,7 +37,7 @@ docker run -p 8081:80 -e 'PGADMIN_DEFAULT_EMAIL=<my-email>' -e 'PGADMIN_DEFAULT_
 
 __To change password__ : "my-email@gmail.com" ➡️ Change password
 
-<p>pgAdmin is accessible with localhost:8080</p>
+<p>pgAdmin is accessible with localhost:8081</p>
 
 1. Add server **postgres-dev** ➡️ **Host name/address** : <your-ip> ➡️ **Port** : 5430 ➡️ **Username** : postgres ➡️ **Password** : \<my-password\>
 
