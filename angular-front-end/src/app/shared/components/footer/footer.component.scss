@@ -1,0 +1,198 @@
+@import 'variables.scss';
+
+.separator-bar {
+    height: 1rem;
+    width: auto;
+    background: #000000;
+  }
+
+  .footer-wrapper {
+    // OR height: 50vh;
+    height: 20vh;
+
+
+        // OR ?
+    // margin-top: 1rem;
+    // margin-left: 15%;
+    // margin-right: 15%;
+
+    margin-top: 0px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 0px;
+
+    flex-direction: column;
+    color: var($primary-color);
+    background: var($secondary-color);
+
+    // OR
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  
+
+  .question {
+    width: 100%;
+    height: 100%;
+  
+    position: relative;
+    height: 10vh;
+
+    div {
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+      }
+  }
+  
+
+  .container-question {
+    width: 100%;
+    height: 7vh;
+    position: absolute;
+  
+    top: 25%;
+  }
+
+  .img-question {
+    width: 25%;
+    height: 100%;
+  
+    display: inline-block;
+  
+    border-top: thin solid var($disable-color);
+    border-bottom: thin solid var($disable-color);
+    border-left: thin solid var($disable-color);
+  
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  
+    text-align: center;
+    background: var($primary-color);
+  
+    position: relative;
+
+    input {
+        width: 70%;
+        height: 75%;
+      
+        object-fit: scale-down;
+      
+        top: 15%;
+        left: 15%;
+        position: absolute;
+      }
+
+  }
+
+  .btn-question {
+    width: 75%;
+    height: 100%;
+  
+    display: inline-block;
+    float: right;
+  
+    border-top: thin solid var($disable-color);
+    border-bottom: thin solid var($disable-color);
+    border-right: thin solid var($disable-color);
+
+    button {
+        width: 100%;
+        height: 100%;
+        background: white;
+        color: gray;
+      
+        /* scale size */
+        font-size: 2vh;
+        color: var($primary-color);
+      
+        border: none;
+      }
+  }
+  
+
+    
+  .sitemap {
+    //   OR 2vh ????
+    margin-top: 4vh;
+    grid-column: 3;
+  
+    text-align: center;
+  
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 40px 40px 40px 40px 15px;
+
+    p {
+        visibility: hidden;
+      }
+      a {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: var($primary-color);
+        font-weight: bold;
+        font-size: 2.5rem;
+      }
+
+
+  }
+
+  .more {
+    grid-column: 5;
+  
+    text-align: center;
+  }
+
+
+
+
+    
+  .logo-mini img {
+    width: 16rem;
+    height: 5rem;
+  }
+
+
+    
+  .author {
+    color: var($secondary-text-color);
+  }
+  
+
+    
+  .contact {
+    width: auto;
+    height: auto;
+
+    button {
+        width: 13rem;
+        height: 4rem;
+        border-radius: 6px;
+      }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .footer-wrapper {
+        height: 20rem;
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer-wrapper {
+        height: 20rem;
+      }
+  }
+
+    /* phone */
+    @media screen and (max-width: 480px) {
+          
+    .contact button {
+        width: 100%;
+        height: 4rem;
+        border-radius: 6px;
+      }
+    }
