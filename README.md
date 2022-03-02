@@ -1,4 +1,8 @@
-# Web app coco <img src="./design/images/java.svg" width="60"> <img src="./design/images/react.svg" width="60"> 
+# Web app coco 
+
+<img src="./design/images/java.svg" width="60">
+
+<img src="./design/images/react.svg" width="60"> 
 
 
 ## Context: 🔦
