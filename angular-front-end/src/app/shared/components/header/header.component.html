@@ -1,0 +1,78 @@
+<div>
+    <header class='main-head'>
+      <nav class='navbar'>
+          <div class='container-navbar'>
+            <img class='logo-navbar' src={Logo} alt='Logo' />
+
+            <div class='cours-navbar'>
+              <button class='btn-navbar'>
+                <span>Cours</span>
+              </button>
+              <div class='bar-navbar'></div>
+            </div>
+
+            <div class='search-navbar'>
+              <img
+                class='search-img'
+                src={Search}
+                alt='Rechercher des cours'
+              />
+              <input
+                placeholder='Rechercher'
+                type='text'
+                class='input-navbar'
+              />
+            </div>
+
+             <!-- TODO Role management Profil/Admin -->
+            <div class='block-navbar'>
+                <div class='admin-navbar'>
+                  <button class='btn-navbar' onClick={headerRedirection}>
+                    <span>Admin</span>
+                  </button>
+                  <div class='bar-navbar'></div>
+                </div>
+
+                <!--  <div class='profil-navbar'>
+                <button class='btn-navbar'>
+                  <span>Profil</span>
+                </button>
+                <div class='bar-navbar'></div>
+              </div> -->
+
+              <div class='disconnect-navbar'>
+                <button class='btn-navbar'>
+                  <span>Déconnexion</span>
+                </button>
+                <div class='bar-navbar'></div>
+              </div>
+            </div>
+          </div>
+      </nav>
+    </header>
+
+    <nav class='subnavbar'>
+      <div class='container-subnavbar'>
+        <div class='allcours-subnavbar'>
+          <button class='btn-navbar'>
+            <span>Tous les cours</span>
+          </button>
+          <div class='bar-navbar'></div>
+        </div>
+
+        <div class='mycours-subnavbar'>
+          <button class='btn-navbar'>
+            <span>Mes cours</span>
+          </button>
+          <div class='bar-navbar'></div>
+        </div>
+
+        <div class='suggestion-subnavbar'>
+          <button class='btn-navbar'>
+            <span>Suggestion</span>
+          </button>
+          <div class='bar-navbar'></div>
+        </div>
+      </div>
+    </nav>
+  </div>
