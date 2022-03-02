@@ -51,5 +51,4 @@ sudo apt-get install openjdk-11-source
 *Add source to eclipse :
 Preferences > Installed JRE > Add > /usr/lib/jvm/java-11-openjdk-amd64
 
-#### Diagram (02/2022) : 
 ![alt text](./documents/images/diagram)
