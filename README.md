@@ -15,7 +15,7 @@
 
 
 ### Front: 🖥️ 
-* **ReactJs/Redux, CSS3**
+* **Angular, CSS3**
 * **Rich-Text Editor:** ckeditor 
  
  
