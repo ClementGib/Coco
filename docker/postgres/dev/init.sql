@@ -69,13 +69,21 @@ CREATE TYPE role_type AS ENUM (
 (
 	tutorial_id SERIAL NOT NULL,
 	title varchar(255) NOT NULL,
-	category_name varchar(255) NOT NULL,
 	author varchar(255) NOT NULL,
 	description text NOT NULL,
 	image_name varchar(255),
 	like_count integer NOT NULL,
-	CONSTRAINT pk_tutorials PRIMARY KEY (tutorial_id),
-	CONSTRAINT fk_tutorials_categories FOREIGN KEY(category_name) REFERENCES cocoapp.categories(name)
+	CONSTRAINT pk_tutorials PRIMARY KEY (tutorial_id)
+	);
+
+	-- CREATE tutorials_categories TABLE --
+	CREATE TABLE cocoapp.tutorials_categories
+(
+	tutorial_id integer NOT NULL,
+	category_name varchar(255) NOT NULL,
+	PRIMARY KEY (tutorial_id, category_name),
+	CONSTRAINT fk_tutorial_id FOREIGN KEY(tutorial_id) REFERENCES cocoapp.tutorials(tutorial_id),
+	CONSTRAINT fk_category_name FOREIGN KEY(category_name) REFERENCES cocoapp.categories(name)
 	);
 
 -- CREATE pages TABLE --
@@ -145,3 +153,4 @@ GRANT SELECT, UPDATE, USAGE ON "posts_post_id_seq" TO cocoweb;
 
 GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE categories TO cocoweb;
 GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE dictionnaries TO cocoweb;
+GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE tutorials_categories TO cocoweb;

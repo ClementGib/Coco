@@ -2,20 +2,15 @@ package com.xcg.coco.core.tutorial;
 
 import java.util.Set;
 
-import com.xcg.coco.core.category.CategoryEntity;
+import com.xcg.coco.core.category.Category;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class Tutorial {
 
 	int id;
 	
 	String title;
 
-	Set<CategoryEntity> categories;
+	Set<Category> categories;
 
 	String author;
 	
@@ -24,5 +19,60 @@ public class Tutorial {
 	String imageName;
 
 	int likeCount;
-	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Set<Category> getCategories() {
+		return categories;
+	}
+
+	public void setCategories(Set<Category> categories) {
+		this.categories = categories;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getImageName() {
+		return imageName;
+	}
+
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
+	}
+
+	public int getLikeCount() {
+		return likeCount;
+	}
+
+	public void setLikeCount(int likeCount) {
+		this.likeCount = likeCount;
+	}
 }

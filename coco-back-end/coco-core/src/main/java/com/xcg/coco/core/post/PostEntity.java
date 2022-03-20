@@ -1,7 +1,5 @@
 package com.xcg.coco.core.post;
 
-//@Getter
-//@Setter
 //@Entity
 //@Table(schema = "cocoapp", name = "posts", uniqueConstraints = { 
 //		@UniqueConstraint(columnNames = "id"),
