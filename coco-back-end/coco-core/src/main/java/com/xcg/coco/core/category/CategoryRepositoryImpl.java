@@ -7,7 +7,7 @@ import javax.ejb.TransactionAttributeType;
 import com.xcg.coco.core.repository.GenericBaseRepository;
 
 /***
- * Implementation of the generic DAO to manage persistence of categories
+ * Implementation of generic DAO to manage persistence for categories
  * 
  * @author Clément Gibert
  *

@@ -3,7 +3,7 @@ package com.xcg.coco.core.page;
 import java.time.Instant;
 
 /**
- * @author xzem
+ * @author Clément Gibert
  *
  */
 public class Page {

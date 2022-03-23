@@ -7,7 +7,7 @@ import javax.ejb.TransactionAttributeType;
 import com.xcg.coco.core.repository.GenericBaseRepository;
 
 /***
- * Implementation of the generic DAO to manage persistence of tutorials
+ * Implementation of generic DAO to manage persistence for tutorials
  * 
  * @author Clément Gibert
  *

@@ -3,12 +3,20 @@ package com.xcg.coco.core.user;
 import java.io.Serializable;
 import java.time.Instant;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -16,6 +24,7 @@ import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
 import com.vladmihalcea.hibernate.type.json.JsonType;
+import com.xcg.coco.core.comment.CommentEntity;
 
 @Entity
 @Table(schema = "cocoapp", name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "username"))
@@ -28,6 +37,11 @@ public class UserEntity implements Serializable {
 	private static final long serialVersionUID = 6644713357542923727L;
 
 	@Id
+	@Column(name = "user_id", nullable = false)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_user_id_seq_gen")
+	@SequenceGenerator(name = "users_user_id_seq_gen", sequenceName = "users_user_id_seq", allocationSize = 1, initialValue = 1)
+	private Integer id;
+	
 	@Column(name = "username", nullable = false)
 	private String username;
 
@@ -35,7 +49,7 @@ public class UserEntity implements Serializable {
 	private String password;
 
 	@Enumerated(EnumType.STRING)
-	@Column(name = "role", nullable = false)
+	@Column(name = "role", length = 25, nullable = false)
 	private Role role;
 
 	@Column(name = "email", nullable = false)
@@ -50,6 +64,19 @@ public class UserEntity implements Serializable {
 
 	@Column(name = "creation_date", nullable = false)
 	private Instant creationDate;
+	
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@OrderBy("page_id")
+	private List<CommentEntity> comments = new ArrayList<>();
+
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public String getUsername() {
 		return username;
@@ -105,5 +132,17 @@ public class UserEntity implements Serializable {
 
 	public void setCreationDate(Instant creationDate) {
 		this.creationDate = creationDate;
+	}
+
+	public List<CommentEntity> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<CommentEntity> comments) {
+		this.comments = comments;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 }
