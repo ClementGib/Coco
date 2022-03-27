@@ -1,8 +1,6 @@
 # Web app coco 
 
-<img src="./documents/images/java.svg" width="60">
-
-<img src="./documents/images/react.svg" width="60"> 
+<img src="./documents/images/java.svg" width="60"> <img src="./documents/images/react.svg" width="60"> 
 
 
 ## Context: 🔦
