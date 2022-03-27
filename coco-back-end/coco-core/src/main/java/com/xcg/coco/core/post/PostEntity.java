@@ -23,7 +23,7 @@ import com.xcg.coco.core.page.PageEntity;
 @Entity
 @Table(schema = "cocoapp", name = "posts", uniqueConstraints = @UniqueConstraint(columnNames = "post_id")) 
 public class PostEntity {
-	
+
 	@Id
 	@Column(name = "post_id", nullable = false)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "posts_post_id_seq_gen")

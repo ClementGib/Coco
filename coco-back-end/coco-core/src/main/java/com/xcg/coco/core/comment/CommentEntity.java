@@ -1,6 +1,5 @@
 package com.xcg.coco.core.comment;
 
-import java.io.Serializable;
 import java.time.Instant;
 
 import javax.persistence.Column;
@@ -19,12 +18,7 @@ import com.xcg.coco.core.page.PageEntity;
 
 @Entity
 @Table(schema = "cocoapp", name = "comments", uniqueConstraints = @UniqueConstraint(columnNames = "comment_id"))
-public class CommentEntity implements Serializable {
-
-	/**
-	 * V0.0.1
-	 */
-	private static final long serialVersionUID = -1125312721510639222L;
+public class CommentEntity {
 
 	@Id
 	@Column(name = "comment_id", nullable = false)
@@ -94,9 +88,5 @@ public class CommentEntity implements Serializable {
 
 	public void setModified(boolean modified) {
 		this.modified = modified;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 }

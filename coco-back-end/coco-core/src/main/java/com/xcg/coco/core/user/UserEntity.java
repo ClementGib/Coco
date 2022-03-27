@@ -1,6 +1,5 @@
 package com.xcg.coco.core.user;
 
-import java.io.Serializable;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -29,12 +28,7 @@ import com.xcg.coco.core.comment.CommentEntity;
 @Entity
 @Table(schema = "cocoapp", name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "username"))
 @TypeDef(name = "jsonb", typeClass = JsonType.class)
-public class UserEntity implements Serializable {
-
-	/**
-	 * V0.0.1
-	 */
-	private static final long serialVersionUID = 6644713357542923727L;
+public class UserEntity {
 
 	@Id
 	@Column(name = "user_id", nullable = false)
@@ -140,9 +134,5 @@ public class UserEntity implements Serializable {
 
 	public void setComments(List<CommentEntity> comments) {
 		this.comments = comments;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 }

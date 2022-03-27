@@ -1,6 +1,5 @@
 package com.xcg.coco.core.tutorial;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -26,12 +25,7 @@ import com.xcg.coco.core.page.PageEntity;
 
 @Entity
 @Table(schema = "cocoapp", name = "tutorials", uniqueConstraints = @UniqueConstraint(columnNames = "tutorial_id")) 
-public class TutorialEntity implements Serializable {
-
-	/**
-	 * V0.0.1
-	 */
-	private static final long serialVersionUID = -5204051786157374314L;
+public class TutorialEntity {
 
 	@Id
 	@Column(name = "tutorial_id", nullable = false)
@@ -52,7 +46,7 @@ public class TutorialEntity implements Serializable {
 	private String imageName;
 
 	@Column(name = "like_count", nullable = false)
-	private int likeCount;
+	private Integer likeCount;
 
 	@OneToMany(mappedBy = "tutorial", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<PageEntity> pages = new ArrayList<>();
@@ -103,11 +97,11 @@ public class TutorialEntity implements Serializable {
 		this.imageName = imageName;
 	}
 
-	public int getLikeCount() {
+	public Integer getLikeCount() {
 		return likeCount;
 	}
 
-	public void setLikeCount(int likeCount) {
+	public void setLikeCount(Integer likeCount) {
 		this.likeCount = likeCount;
 	}
 
@@ -125,9 +119,5 @@ public class TutorialEntity implements Serializable {
 
 	public void setCategories(Set<CategoryEntity> categories) {
 		this.categories = categories;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 }
