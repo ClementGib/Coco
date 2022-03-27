@@ -5,12 +5,6 @@ import java.time.LocalDate;
 import java.util.Map;
 import java.util.Objects;
 
-import lombok.Getter;
-import lombok.Setter;
-
-
-@Getter
-@Setter
 public class UserDTO {
 
 	private String username;
@@ -28,6 +22,8 @@ public class UserDTO {
 
 	private boolean admin;
 
+	
+	
 	@Override
 	public int hashCode() {
 		int hash = 7;

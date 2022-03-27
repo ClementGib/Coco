@@ -1,7 +1,8 @@
-# Web app coco <img src="./design/images/java.svg" width="60"> <img src="./design/images/react.svg" width="60"> 
+# Web app coco 
 
+<img src="./design/images/java.svg" width="60">
 
-
+<img src="./design/images/react.svg" width="60"> 
 
 
 ## Context: 🔦
@@ -53,3 +54,5 @@ sudo apt-get install openjdk-11-source
 
 *Add source to eclipse :
 Preferences > Installed JRE > Add > /usr/lib/jvm/java-11-openjdk-amd64
+
+![alt text](./documents/images/diagram.png)

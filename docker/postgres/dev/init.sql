@@ -22,44 +22,26 @@ GRANT ALL ON SCHEMA cocoapp TO cocoadm;
 -- SET DEFAULT SCHEMA --
 SET search_path TO cocoapp;
 
--- CREATE ENUM --
-CREATE TYPE role_type AS ENUM (
-    'USER', 
-    'ADMIN', 
-    'GUEST'
-);
-
 -- CREATE TABLES --
 
 -- CREATE users TABLE --
 	CREATE TABLE cocoapp.users
 (
-	username varchar(255) NOT NULL,
+	user_id SERIAL UNIQUE NOT NULL,
+	username varchar(255) UNIQUE NOT NULL,
 	password text NOT NULL,
-	role role_type NOT NULL,
-	email varchar(255) NOT NULL,
+	role varchar(25) NOT NULL,
+	email varchar(255) UNIQUE NOT NULL,
 	history jsonb NOT NULL,
 	birthday DATE NOT NULL,
 	creation_date timestamp NOT NULL,
-	PRIMARY KEY (username)
-	);
-	
--- CREATE comments TABLE --
-	CREATE TABLE cocoapp.comments
-(
-	comment_id SERIAL NOT NULL,
-	tutorial_id integer NOT NULL,
-	user_username varchar(255) NOT NULL,
-	content text NOT NULL,
-	creation_date timestamp NOT NULL,
-	PRIMARY KEY (comment_id),
-	CONSTRAINT fk_comments_users FOREIGN KEY(user_username) REFERENCES cocoapp.users(username)
+	CONSTRAINT pk_users PRIMARY KEY (user_id)
 	);
 
 -- CREATE categories TABLE --
 	CREATE TABLE cocoapp.categories
 (
-	name varchar(255) NOT NULL UNIQUE,
+	name varchar(255) UNIQUE NOT NULL UNIQUE,
 	description text NOT NULL,
 	CONSTRAINT pk_categories PRIMARY KEY (name)
 	);
@@ -67,23 +49,31 @@ CREATE TYPE role_type AS ENUM (
 -- CREATE tutorials TABLE --
 	CREATE TABLE cocoapp.tutorials
 (
-	tutorial_id SERIAL NOT NULL,
-	title varchar(255) NOT NULL,
-	category_name varchar(255) NOT NULL,
+	tutorial_id SERIAL UNIQUE NOT NULL,
+	title varchar(255) UNIQUE NOT NULL,
 	author varchar(255) NOT NULL,
 	description text NOT NULL,
 	image_name varchar(255),
 	like_count integer NOT NULL,
-	CONSTRAINT pk_tutorials PRIMARY KEY (tutorial_id),
-	CONSTRAINT fk_tutorials_categories FOREIGN KEY(category_name) REFERENCES cocoapp.categories(name)
+	CONSTRAINT pk_tutorials PRIMARY KEY (tutorial_id)
+	);
+
+	-- CREATE tutorials_categories TABLE --
+	CREATE TABLE cocoapp.tutorials_categories
+(
+	tutorial_id integer UNIQUE NOT NULL,
+	category_name varchar(255) NOT NULL,
+	PRIMARY KEY (tutorial_id, category_name),
+	CONSTRAINT fk_tutorial_id FOREIGN KEY(tutorial_id) REFERENCES cocoapp.tutorials(tutorial_id),
+	CONSTRAINT fk_category_name FOREIGN KEY(category_name) REFERENCES cocoapp.categories(name)
 	);
 
 -- CREATE pages TABLE --
 	CREATE TABLE cocoapp.pages
 	(
-	page_id SERIAL NOT NULL, 
-	position integer NOT NULL,
+	page_id SERIAL UNIQUE NOT NULL, 
 	tutorial_id integer NOT NULL,
+	position integer NOT NULL,
 	title text NOT NULL,
 	creation_date timestamp NOT NULL,
 	update_date timestamp NOT NULL,
@@ -94,9 +84,9 @@ CREATE TYPE role_type AS ENUM (
 -- CREATE posts TABLE --
 	CREATE TABLE cocoapp.posts
 	(
-	post_id SERIAL NOT NULL,
-	position integer NOT NULL,
+	post_id SERIAL UNIQUE NOT NULL,
 	page_id integer NOT NULL,
+	position integer NOT NULL,	
 	title text NOT NULL,
 	content text NOT NULL,
 	creation_date timestamp NOT NULL,
@@ -104,11 +94,25 @@ CREATE TYPE role_type AS ENUM (
 	CONSTRAINT pk_posts PRIMARY KEY (post_id),
 	CONSTRAINT fk_posts_pages FOREIGN KEY(page_id) REFERENCES cocoapp.pages(page_id)
 	);
+
+	-- CREATE comments TABLE --
+	CREATE TABLE cocoapp.comments
+(
+	comment_id SERIAL UNIQUE NOT NULL,
+	page_id integer NOT NULL,
+	username varchar(255) NOT NULL,
+	content text NOT NULL,
+	creation_date timestamp NOT NULL,
+	modified boolean,
+	PRIMARY KEY (comment_id),
+	CONSTRAINT fk_comments_users FOREIGN KEY(username) REFERENCES cocoapp.users(username),
+	CONSTRAINT fk_page_id FOREIGN KEY(page_id) REFERENCES cocoapp.pages(page_id)
+	);
 	
 -- CREATE dictionnaries TABLE --
 	CREATE TABLE cocoapp.dictionnaries
 	(
-	word varchar(255) NOT NULL UNIQUE,
+	word varchar(255) UNIQUE NOT NULL UNIQUE,
 	description text NOT NULL,
 	used integer NOT NULL,
 	CONSTRAINT pk_dictionnaries PRIMARY KEY (word)
@@ -117,8 +121,8 @@ CREATE TYPE role_type AS ENUM (
 -- CREATE ids TABLE --
 	CREATE TABLE cocoapp.ids
 	(
-	origin varchar(255) NOT NULL UNIQUE,
-	username text NOT NULL,
+	origin varchar(255) UNIQUE NOT NULL UNIQUE,
+	username varchar(255) NOT NULL,
 	email varchar(255) NOT NULL,
 	password text NOT NULL,
 	description text NOT NULL,
@@ -145,3 +149,4 @@ GRANT SELECT, UPDATE, USAGE ON "posts_post_id_seq" TO cocoweb;
 
 GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE categories TO cocoweb;
 GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE dictionnaries TO cocoweb;
+GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE tutorials_categories TO cocoweb;
