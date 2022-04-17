@@ -30,8 +30,6 @@
 ### Tools: 🧰 
 Vscode, Eclipse, Docker, Adobe Xd, Maven, Git, WSL
 
-
-
 **npm dependencies :**
 Prod : 
 * react-redux

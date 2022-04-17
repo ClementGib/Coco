@@ -1,78 +1,79 @@
-<div>
-    <header class='main-head'>
-      <nav class='navbar'>
-          <div class='container-navbar'>
-            <img class='logo-navbar' src='../../../../assets/icons/logo-white.svg' alt='Logo' />
 
-            <div class='cours-navbar'>
-              <button class='btn-navbar'>
-                <span>Cours</span>
-              </button>
-              <div class='bar-navbar'></div>
-            </div>
-
-            <div class='search-navbar'>
-              <img
-                class='search-img'
-                src='../../../../assets/icons/search-black.svg'
-                alt='Rechercher des cours'
-              />
-              <input
-                placeholder='Rechercher'
-                type='text'
-                class='input-navbar'
-              />
-            </div>
-
-             <!-- TODO Role management Profil/Admin -->
-            <div class='block-navbar'>
-                <div class='admin-navbar'>
-                  <button class='btn-navbar' onClick={headerRedirection}>
-                    <span>Admin</span>
-                  </button>
-                  <div class='bar-navbar'></div>
+          <header class="main-header">
+            
+            <nav class="main-navbar">
+                <div class="container-navbar">
+                  <div class="container-logo">
+                  <img class='logo-navbar' src='../../../../assets/icons/logo-white.svg' alt='Logo' />
                 </div>
+                  <div class='cours-navbar'>
+                    <button class='btn-navbar'>
+                      <span>Cours</span>
+                    </button>
+                    <div class='bar-navbar'></div>
+                  </div>
 
-                <!--  <div class='profil-navbar'>
+                  <div class='search-navbar'>
+                    <img
+                      class='search-img'
+                      src='../../../../assets/icons/search-black.svg'
+                      alt='Rechercher des cours'
+                    />
+                    <input
+                      placeholder='Rechercher'
+                      type='text'
+                      class='input-navbar'
+                    />
+                  </div>
+
+                  <!-- TODO Role management Profil/Admin -->
+                  <div class='submenu-navbar'>
+                      <div class='admin-navbar'>
+                        <button class='btn-navbar' onClick={headerRedirection}>
+                          <span>Admin</span>
+                        </button>
+                        <div class='bar-navbar'></div>
+                      </div>
+
+                      <div class='profil-navbar'>
+                      <button class='btn-navbar'>
+                        <span>Profil</span>
+                      </button>   
+                      <div class='bar-navbar'></div>
+                    </div>
+
+                    <div class='disconnect-navbar'>
+                      <button class='btn-navbar'>
+                        <span>Déconnexion</span>
+                      </button>
+                      <div class='bar-navbar'></div>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+          
+          <nav class='sub-navbar'>
+            <div class='container-subnavbar'>
+              <div class='allcours-subnavbar'>
                 <button class='btn-navbar'>
-                  <span>Profil</span>
+                  <span>Tous les cours</span>
                 </button>
                 <div class='bar-navbar'></div>
-              </div> -->
+              </div>
 
-              <div class='disconnect-navbar'>
+              <div class='mycours-subnavbar'>
                 <button class='btn-navbar'>
-                  <span>Déconnexion</span>
+                  <span>Mes cours</span>
+                </button>
+                <div class='bar-navbar'></div>
+              </div>
+
+              <div class='suggestion-subnavbar'>
+                <button class='btn-navbar'>
+                  <span>Suggestion</span>
                 </button>
                 <div class='bar-navbar'></div>
               </div>
             </div>
-          </div>
-      </nav>
-    </header>
-
-    <nav class='subnavbar'>
-      <div class='container-subnavbar'>
-        <div class='allcours-subnavbar'>
-          <button class='btn-navbar'>
-            <span>Tous les cours</span>
-          </button>
-          <div class='bar-navbar'></div>
-        </div>
-
-        <div class='mycours-subnavbar'>
-          <button class='btn-navbar'>
-            <span>Mes cours</span>
-          </button>
-          <div class='bar-navbar'></div>
-        </div>
-
-        <div class='suggestion-subnavbar'>
-          <button class='btn-navbar'>
-            <span>Suggestion</span>
-          </button>
-          <div class='bar-navbar'></div>
-        </div>
-      </div>
-    </nav>
-  </div>
+          </nav>
+        </header>
