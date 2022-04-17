@@ -4,3 +4,5 @@
 */.settings/*
 .vscode/*
 /node_modules
+.angular/*
+.angular
