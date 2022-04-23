@@ -8,14 +8,20 @@ $font-size: 62.5%;
 $text-size: 2rem;
 $navbtn-text-size: 3rem;
 $subnavbtn-text-size: 2.5rem;
-$input-text-size: 3rem;
+$input-text-size: 2rem;
+
+$z-index-max: 100;
+$z-index-top: 80;
+$z-index-body: 50;
 
 /* COLORS */
 //$primary-color: #43b1e8;
 $primary-color: #0087a6;
 $secondary-color: #344a53;
-$tertiary-color: #e6f4f1;
-$disable-color: #97afb9;
+$tertiary-color: #ffffff;
+
+$clear-color: #ebfcff;
+$grey-color: #C3CED2;
 
 $validation-color: #368c4e;
 $warning-color: #f59432;

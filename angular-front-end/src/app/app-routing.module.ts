@@ -1,12 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/components/admin.component';
-import { HomeComponent } from './home/components/home.component';
+import { AllCoursesComponent } from './courses/components/all-courses/all-courses.component';
+import { CoursesComponent } from './courses/components/courses.component'; 
+import { SuggestionComponent } from './courses/components/suggestion/suggestion.component';
 import { LoginComponent } from './login/components/login.component';
+import { ProfileComponent } from './profile/components/profile.component';
 
 const routes: Routes = [
-  { path: 'first-component', component: HomeComponent },
-  { path: 'second-component', component: AdminComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'courses', component: CoursesComponent,
+children: [
+  { path: 'all', component: AllCoursesComponent },
+  { path: 'suggestion', component: SuggestionComponent },
+]},
+  { path: 'admin', component: AdminComponent },
+  { path: 'profil', component: ProfileComponent },
 ];
     // ,
   //  {
@@ -21,7 +30,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    useHash: true
+    useHash: false
   })],
   exports: [RouterModule]
 })
