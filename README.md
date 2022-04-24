@@ -15,7 +15,7 @@
 
 
 ### Front: 🖥️ 
-* **ReactJs/Redux, CSS3**
+* **Angular, CSS3**
 * **Rich-Text Editor:** ckeditor 
  
  
@@ -29,8 +29,6 @@
 
 ### Tools: 🧰 
 Vscode, Eclipse, Docker, Adobe Xd, Maven, Git, WSL
-
-
 
 **npm dependencies :**
 Prod : 

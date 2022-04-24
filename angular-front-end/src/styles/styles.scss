@@ -1,0 +1,44 @@
+@import 'variables.scss';
+
+//REMOVE DEFAULT MARGIN/PADDING 
+::ng-deep * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+  body {
+    font-family: "Roboto";
+    background-color: $tertiary-color;
+
+  }
+  
+  :root {
+    font-size: $font-size;
+  }
+
+  .main-body {
+    width: 80%;
+    height:60rem;
+  }
+
+  //DEFAULT NAVBAR LINK
+  .link-navbar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-decoration: none;
+
+    span {
+      font-size: $navbtn-text-size;
+    }
+
+    hr {
+      border: 0;
+      height: 10%;
+      width: 100%;
+      margin-top: 1rem;
+      visibility: hidden;
+    }
+  }
