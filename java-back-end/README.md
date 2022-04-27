@@ -1,3 +1,8 @@
+## Architecture
+
+![alt text](./documents/images/diagram.png)
+
+
 ## Procedure project:
 
 1. Création du pom.xml parent:
