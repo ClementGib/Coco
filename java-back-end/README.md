@@ -1,6 +1,6 @@
 ## Architecture
 
-![alt text](./documents/images/diagram.png)
+![alt text](../documents/images/diagram.png)
 
 
 ## Procedure project:
