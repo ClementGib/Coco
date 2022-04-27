@@ -1,5 +1,6 @@
 ## Architecture
 
+Database entities
 ![alt text](../documents/images/diagram.png)
 
 
