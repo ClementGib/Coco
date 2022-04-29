@@ -1,6 +1,6 @@
-https://loiane.com/2017/08/angular-reactive-forms-trigger-validation-on-submit/
 
-Numérotation des étapes avec explication:
+### Numérotation des étapes avec explication:
+Source idea : https://loiane.com/2017/08/angular-reactive-forms-trigger-validation-on-submit/
 ```java
 validateAllFormFields(formGroup: FormGroup) {         //{1}
   Object.keys(formGroup.controls).forEach(field => {  //{2}
