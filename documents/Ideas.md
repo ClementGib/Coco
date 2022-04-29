@@ -1,5 +1,5 @@
 
-### Numérotation des étapes avec explication:
+### Numérotation des étapes avec explications:
 Source idea : https://loiane.com/2017/08/angular-reactive-forms-trigger-validation-on-submit/
 
 Exemple :
