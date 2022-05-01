@@ -4,7 +4,7 @@
 
 
 ## Context: 🔦
-*L'objectif de ce projet est de réaliser une web application de cours particuliers. Cette application permettra à mes proches d'apprendre de nouvelles choses liées à l'informatique et de réviser les formations eu ensemble.*
+*L'objectif de ce projet est de réaliser une application web de cours particuliers. Cette application permettra à mes proches d'apprendre de nouvelles choses liées à l'informatique et de réviser les formations vue ensemble.*
 
 
 ## Technologies: ✨
@@ -22,7 +22,7 @@
 * **Java version :** Jakarta EE 8 & Java 11
 * **JDK :** OpenJDK 11 (VM 18.9)
 * **Maven :** Multi-Module project
-* **Database :** Postesql
+* **Database :** PostgreSQL
 * **Server :** Jboss Wildfly 23.0.2
  
 
