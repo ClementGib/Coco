@@ -15,7 +15,8 @@
 
 
 ### Front: 🖥️ 
-* **Angular, CSS3**
+* **Angular 13.1.1**
+* **CSS3 + Sass **
 * **Rich-Text Editor:** ckeditor 
  
  
@@ -28,17 +29,7 @@
  
 
 ### Tools: 🧰 
-Vscode, Eclipse, Docker, Adobe Xd, Maven, Git, WSL
-
-**npm dependencies :**
-Prod : 
-* react-redux
-* redux
-
-Dev: 
-* reduxjs/toolkit
-* redux-devtools
-* npm install file-loader --save-dev
+Vscode, Eclipse, Docker, Adobe Xd, Maven, Git
 
 
 #### Install :
