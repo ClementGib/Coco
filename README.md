@@ -9,8 +9,8 @@
 
 ## Technologies: ✨
 **Architecture :**
-- **Backend: Java monolithic RESTfull web services**
-- **Frontend: Angular web app**
+- **Backend:** Java monolithic RESTfull web services
+- **Frontend:** Angular web app
 
 ### Front: 🖥️ 
 * **Angular 13.1.1**
