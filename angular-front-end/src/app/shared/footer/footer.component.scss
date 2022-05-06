@@ -1,10 +1,13 @@
 @import 'variables.scss';
 
-.separator-bar {
-    height: 1rem;
-    width: auto;
-    background: #000000;
-  }
+
+
+
+
+///before
+
+
+
 
   .footer-wrapper {
     // OR height: 50vh;
@@ -196,3 +199,31 @@
         border-radius: 6px;
       }
     }
+
+
+
+
+///AFTER
+footer {
+  //shadow like header
+  box-shadow: 0 2px 5px #0000004d;
+  height: 30rem;
+  background-color: $primary-color;
+}
+
+.main-footer {
+  height: 20rem;
+  background-color: $tertiary-color;
+}
+
+.sub-footer {
+  height: 10rem;
+  background-color: $primary-color  ;
+}
+
+
+// .separator-bar {
+//   height: 1rem;
+//   width: auto;
+//   background: #000000;
+// }
