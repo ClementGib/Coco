@@ -1,12 +1,13 @@
 @import "../../../../../styles/variables.scss";
 
 .sub-navbar {
-  background-color: $grey-color;
+  background-color: $tertiary-color;
   display: flex;
   justify-content: center;
   width: 100%;
   margin-top:8rem;
   height: 6rem;
+  box-shadow: 0 2px 5px #0000004d;
 
 
   position: absolute;
@@ -46,6 +47,15 @@
     }
     hr {
       visibility: visible;
+      background-color: $primary-color;
+    }
+  }
+
+  a:hover {
+    span {
+      color: $primary-color;
+    }
+    hr {
       background-color: $primary-color;
     }
   }

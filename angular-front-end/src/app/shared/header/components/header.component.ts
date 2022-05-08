@@ -12,4 +12,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  isCourses() {
+    return this.router.url.includes("/courses");
+  }
 }
