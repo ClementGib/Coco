@@ -7,7 +7,7 @@
 *L'objectif de ce projet est de réaliser une application web de cours particuliers. Cette application permettra à mes proches d'apprendre de nouvelles choses liées à l'informatique et de réviser les formations vue ensemble.*
 
 
-## Technologies: ✨
+## Stack: 🧱 
 **Architecture :**
 - **Backend:** Java monolithic RESTfull web services
 - **Frontend:** Angular web app
