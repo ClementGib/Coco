@@ -8,7 +8,6 @@
 
 
 ## Stack: 🧱 
-**Architecture :**
 - **Backend:** Java monolithic RESTfull web services
 - **Frontend:** Angular web app
 
