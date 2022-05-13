@@ -8,22 +8,20 @@
 
 
 ## Stack: 🧱 
-- **Backend:** Java monolithic RESTfull web services
-- **Frontend:** Angular web app
+**Backend:** Java monolithic RESTfull web services
+**Frontend:** Angular web app
 
-### Front: 🖥️ 
-* **Angular 13.1.1**
-* **CSS3 + Sass**
-* **Rich-Text Editor:** ckeditor 
- 
- 
-### Back: ⚙️
+### Backend: ⚙️
 * **Java version :** Jakarta EE 8 & Java 11
 * **JDK :** OpenJDK 11 (VM 18.9)
 * **Maven :** Multi-Module project
 * **Database :** PostgreSQL
 * **Server :** Jboss Wildfly 23.0.2
- 
+
+### Frontend: 🖥️ 
+* **Angular 13.1.1**
+* **CSS3 + Sass**
+* **Rich-Text Editor:** ckeditor 
 
 ### Tools: 🧰 
 Vscode, Eclipse, Docker, Adobe Xd, Maven, Git
