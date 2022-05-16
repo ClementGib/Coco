@@ -17,16 +17,19 @@
       font-size: $font-size;
     }
 
+    .page-container {
+      display: flex;
+      flex-direction: column;
+    }
 
-    .format-body {
-      // margin-top: 8rem;
+    .body-background {
       display: flex;
       justify-content: center;
       background-color: $clear-color;
     }
 
-    .main-body {
-      margin-top: 8rem;
+    .body-content {
+      margin-top: 12rem;
       width: 80%;
       height:80rem;
       background-color: white;
