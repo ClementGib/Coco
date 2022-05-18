@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,12 @@ export class AppComponent {
   public isAdmin: boolean;
   public env: String = "dev";
 
-  constructor(){
+  constructor(private router: Router){
     this.isAdmin = true;
   }
 
+  isCourses() {
+    return this.router.url.includes("/courses");
+  }
 
 }
