@@ -1,4 +1,4 @@
-<nav class="main-navbar" >
+<nav class="main-navbar" [ngClass]="{'standalone-navbar': !isCourses()}"  >
     <img
       class="logo-navbar"
       src="../../../../assets/icons/logo-white.svg"
@@ -8,7 +8,7 @@
       <a class="link-navbar" routerLink="/courses" 
       routerLinkActive="active-link" 
       [routerLinkActiveOptions]="{exact: false}">
-        <span routerLinkActive="active-link">Cours</span>
+        <span>Cours</span>
         <hr/>
       </a>
     </div>
