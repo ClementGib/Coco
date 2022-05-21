@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>coco-back-end</artifactId>
-		<groupId>com.xcg.coco</groupId>
+		<groupId>com.cdx.coco</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
@@ -18,17 +18,17 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.xcg.coco</groupId>
+			<groupId>com.cdx.coco</groupId>
 			<artifactId>coco-core</artifactId>
 			<type>ejb</type>
 		</dependency>
 		<dependency>
-			<groupId>com.xcg.coco</groupId>
+			<groupId>com.cdx.coco</groupId>
 			<artifactId>coco-api</artifactId>
 			<type>ejb</type>
 		</dependency>
 		<dependency>
-			<groupId>com.xcg.coco</groupId>
+			<groupId>com.cdx.coco</groupId>
 			<artifactId>coco-ws</artifactId>
 			<type>war</type>
 		</dependency>
@@ -51,7 +51,7 @@
 					<outputFileNameMapping>@{artifactId}@.@{extension}@</outputFileNameMapping>
 					<modules>
 						<webModule>
-							<groupId>com.xcg.coco</groupId>
+							<groupId>com.cdx.coco</groupId>
 							<artifactId>coco-ws</artifactId>
 							<contextRoot>/coco</contextRoot>
 						</webModule>

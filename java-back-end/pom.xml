@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.xcg.coco</groupId>
+	<groupId>com.cdx.coco</groupId>
 	<artifactId>coco-back-end</artifactId>
 
 	<version>0.0.1-SNAPSHOT</version>
@@ -44,30 +44,30 @@
 		<dependencies>
 			<!-- Coco -->
 			<dependency>
-				<groupId>com.xcg.coco</groupId>
+				<groupId>com.cdx.coco</groupId>
 				<artifactId>coco-core</artifactId>
 				<version>${project.version}</version>
 				<type>ejb</type>
 			</dependency>
 			<dependency>
-				<groupId>com.xcg.coco</groupId>
+				<groupId>com.cdx.coco</groupId>
 				<artifactId>coco-api</artifactId>
 				<version>${project.version}</version>
 				<type>ejb</type>
 			</dependency>
 			<dependency>
-				<groupId>com.xcg.coco</groupId>
+				<groupId>com.cdx.coco</groupId>
 				<artifactId>coco-ws</artifactId>
 				<type>war</type>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.xcg.coco</groupId>
+				<groupId>com.cdx.coco</groupId>
 				<artifactId>coco-ear</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.xcg.coco</groupId>
+				<groupId>com.cdx.coco</groupId>
 				<artifactId>coco-tools</artifactId>
 				<version>${project.version}</version>
 			</dependency>

@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>coco-back-end</artifactId>
-		<groupId>com.xcg.coco</groupId>
+		<groupId>com.cdx.coco</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
