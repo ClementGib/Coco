@@ -8,7 +8,7 @@ Database entities
 
 1. Création du pom.xml parent:
 ```bash
-mvn archetype:generate -DgroupId=com.clement.xcg.coco -DartifactId=coco-back
+mvn archetype:generate -DgroupId=com.clement.cdx.coco -DartifactId=coco-back
 ```
 
 ```xml
@@ -33,8 +33,8 @@ mvn archetype:generate -DgroupId=com.clement.xcg.coco -DartifactId=coco-back
 2. Création des modules maven :
 ```bash
 cd coco-back
-mvn archetype:generate -DgroupId=com.xcg.coco  -DartifactId=core
-mvn archetype:generate -DgroupId=com.xcg.coco  -DartifactId=tools
+mvn archetype:generate -DgroupId=com.cdx.coco  -DartifactId=core
+mvn archetype:generate -DgroupId=com.cdx.coco  -DartifactId=tools
 ```
 
 ## Procedure server (PROD):
