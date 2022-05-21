@@ -35,9 +35,11 @@
             },
            "styles": [
             "src/styles/styles.scss",
-            "src/styles/variables.scss"
+            "src/styles/variables.scss",
+            "node_modules/swagger-ui/dist/swagger-ui.css"
           ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {

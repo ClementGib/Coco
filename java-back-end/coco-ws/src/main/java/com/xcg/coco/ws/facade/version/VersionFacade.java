@@ -13,15 +13,14 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tags;
 
 
-@Path("/")
+@Path("/version")
 @Tags
 public interface VersionFacade {
     @GET
-    @Path("/version")
     @Produces(TEXT_PLAIN)
     @Operation(summary = "Coco application version", 
     responses = {
-    		@ApiResponse(responseCode = "200", 
+    		@ApiResponse(responseCode = "200",
     				description = "Version number",
     				content = @Content(mediaType = TEXT_PLAIN, schema = @Schema(implementation = String.class)))})
     String getVersion();
