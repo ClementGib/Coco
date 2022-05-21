@@ -12,4 +12,9 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+getVersion(): number {
+  //TODO getversion
+  return 1;
+}
+
 }
