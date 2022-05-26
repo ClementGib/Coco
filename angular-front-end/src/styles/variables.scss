@@ -3,6 +3,25 @@
 /* GENERAL PROPERTIES */
 $size-divisor: 3;
 
+/* COLORS */
+$primary-color: #0087a6;
+$secondary-color: #344a53;
+$tertiary-color: #ffffff;
+
+$primary-text-color:$primary-color;
+$secondary-text-color:$secondary-color;
+
+$pusher-color:$secondary-color;
+
+$clear-color: #f0f2f5;
+$grey-color: #C3CED2;
+$dark-grey-color: #808688;
+
+$validation-color: #368c4e;
+$warning-color: #f59432;
+$invalid-color: #c15b71;
+$disabled-color: #C3CED2;
+
 /* FONT */
 $font-size: 62.5%;  
 $text-size: 2rem;
@@ -14,18 +33,7 @@ $z-index-max: 100;
 $z-index-top: 80;
 $z-index-body: 50;
 
-/* COLORS */
-//$primary-color: #43b1e8;
-$primary-color: #0087a6;
-$secondary-color: #344a53;
-$tertiary-color: #ffffff;
 
-$clear-color: #ebfcff;
-$grey-color: #C3CED2;
-
-$validation-color: #368c4e;
-$warning-color: #f59432;
-$invalid-color: #c15b71;
 
 
 /* ELEMENT PROPERTIES */
