@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 import { CoursesModule } from './courses/courses.module';
 import { AdminModule } from './admin/admin.module';
 import { SharedModule } from '@shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     SharedModule,

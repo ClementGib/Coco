@@ -1,44 +1,26 @@
 <footer>
-    <div class='separator-bar'></div>
-
-    <div class='footer-wrapper'>
-      <div class='question'>
-        <div class='container-question'>
-          <div class='img-question' for='button-question'>
-            <input
-              type='image'
-              src={Question}
-              alt=''
-            />
-          </div>
-
-          <div class='btn-question'>
-            <button id='button-question'>Besoin d'aide ?</button>
-          </div>
+    <!-- <div class="separator-bar"></div> -->
+    <div class="main-footer">
+      <div class="container-footer">
+        <div class="social-footer">
+          <a class="social twitter-link" href="https://twitter.com/CDXitech"></a>
+          <a class="social linkedin-link" href="https://www.linkedin.com/in/cl%C3%A9ment-gibert-7012"></a>
+          <a class="social github-link" href="https://github.com/ClementGib/ClementGib"></a>
+          <a class="social email-link" href="mailto:cdx.it.contact@gmail.com"></a>
         </div>
+        <div class="section-footer">
+          <a class="section left-section" [routerLink]="['/login']">Login</a>
+          <a class="section" [routerLink]="['/courses']">Cours</a>
+          <a class="section" [routerLink]="['/profil']">Profil</a>
+        </div>
+        <img
+        class="logo-footer"
+        src="../../../../assets/icons/logo-blue.svg"
+        alt="Logo"/>
       </div>
-
-      <div class='sitemap'>
-        <a>Cours</a>
-        <a>Profil</a>
-        <a>Contact</a>
-        <a>Termes</a>
-
-        <p id='copy-footer'>Coco &copy</p>
-      </div>
-
-      <div class='more'>
-        <div class='logo-mini'>
-          <img src={Logo} alt='' />
-        </div>
-
-        <div class='author'>
-          <h3>Clément G</h3>
-        </div>
-
-        <div class='contact'>
-          <button>Email me.</button>
-        </div>
-      </div>
+    </div>
+    <div class="sub-footer">
+          <p>Powered by CDX 2022</p>
+          <p>Version: {{ version }}</p>
     </div>
   </footer>
