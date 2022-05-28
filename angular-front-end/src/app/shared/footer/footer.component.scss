@@ -18,54 +18,64 @@ footer {
   align-items: center;
 
   .container-footer {
-    width: 20%;
-    height: 60%;
-    margin-top:2rem;
+    width: 30%;
+    height: 70%;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 
     .social-footer {
-      width: 80%;
+      width: 50%;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
 
       .social {
-        width: 5rem;
-        height: 5rem;
-        border: 2px solid;
-        border-color: $primary-color;
-        border-radius: 100%;
+        width: 4.5rem;
+        height: 4.5rem;
       }
 
-      .email-link {}
+      .email-link {
+        content: url('../../../assets/icons/email.svg');
+      }
 
-      .twitter-link {}
+      .twitter-link {
+        content: url('../../../assets/icons/twitter.svg');
+      }
 
-      .linkedin-link {}
+      .linkedin-link {
+        content: url('../../../assets/icons/linkedin.svg');
+      }
 
-      .github-link {}
+      .github-link {
+        content: url('../../../assets/icons/github.svg');
+      }
     }
 
     .section-footer {
-      width:80%;
+      width: 35%;
+      margin-top: 1.5rem;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       font-size: $footer-link-text-size;
       color: $secondary-color;
 
+      .section {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a:hover {
+        cursor: pointer;
+        color: $primary-color;
+      }
     }
 
-    .copy-footer {
-      width:100%;
-      display: flex;
-      justify-content: center;
-      font-size: $footer-copy-text-size;
-      color: $secondary-color;
-
+    .logo-footer {
+      margin-top: 2.5rem;
+      width: 20%;
     }
   }
 }
@@ -78,6 +88,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: $footer-text-size;
 }
 
 //TODO MediaQuery

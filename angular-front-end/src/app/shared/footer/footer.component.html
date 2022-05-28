@@ -3,24 +3,24 @@
     <div class="main-footer">
       <div class="container-footer">
         <div class="social-footer">
-          <div class="social email-link"></div>
-          <div class="social twitter-link" href="https://twitter.com/CDXitech"></div>
-          <div class="social linkedin-link"></div>
-          <div class="social github-link"></div>
+          <a class="social twitter-link" href="https://twitter.com/CDXitech"></a>
+          <a class="social linkedin-link" href="https://www.linkedin.com/in/cl%C3%A9ment-gibert-7012"></a>
+          <a class="social github-link" href="https://github.com/ClementGib/ClementGib"></a>
+          <a class="social email-link" href="mailto:cdx.it.contact@gmail.com"></a>
         </div>
         <div class="section-footer">
-          <a>Cours</a>
-          <a>Profil</a>
-          <a>Contact</a>
-          <a>Version</a>
+          <a class="section left-section" [routerLink]="['/login']">Login</a>
+          <a class="section" [routerLink]="['/courses']">Cours</a>
+          <a class="section" [routerLink]="['/profil']">Profil</a>
         </div>
-        <span class="copy-footer">Coco ©</span>
+        <img
+        class="logo-footer"
+        src="../../../../assets/icons/logo-blue.svg"
+        alt="Logo"/>
       </div>
     </div>
     <div class="sub-footer">
-      <div class="info-footer">
-          <p>Super-powered by CDX</p>
-          <p>Version {{ getVersion() }}</p>
-      </div>
+          <p>Powered by CDX 2022</p>
+          <p>Version: {{ version }}</p>
     </div>
   </footer>
