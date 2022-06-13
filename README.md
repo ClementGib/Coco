@@ -29,12 +29,16 @@ Vscode, Eclipse, Docker, Adobe Xd, Maven, Git
 
 
 #### Install :
-*Install jdk :*
+Install jdk :
+```bash
 sudo apt install openjdk-11-jdk
+```
 
-*Install sources*
+Install sources
+```bash
 sudo apt-get install openjdk-11-source
+```
 
-*Add source to eclipse :
+Add source to eclipse :
 Preferences > Installed JRE > Add > /usr/lib/jvm/java-11-openjdk-amd64
 
