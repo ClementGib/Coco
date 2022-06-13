@@ -22,6 +22,7 @@
 * **Angular 13.1.1**
 * **CSS3 + Sass**
 * **Rich-Text Editor:** ckeditor 
+* **Jest**
 
 ### Tools: 🧰 
 Vscode, Eclipse, Docker, Adobe Xd, Maven, Git
