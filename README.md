@@ -28,7 +28,7 @@
 Vscode, Eclipse, Docker, Adobe Xd, Maven, Git
 
 
-#### Install :
+#### Installation :
 Install jdk :
 ```bash
 sudo apt install openjdk-11-jdk
