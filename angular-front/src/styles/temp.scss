@@ -1,0 +1,444 @@
+
+  
+
+  
+  /* ????????????????????????????????????? */
+  .basic-head {
+    background: var($primary-color);
+    padding: 2rem;
+  
+    display: flex;
+    justify-content: center;
+  
+    width: 100%;
+    margin: auto;
+  }
+  
+  .logo-navbar {
+    width: 11%;
+  }
+  
+
+  ////////////////////////////
+
+
+  
+  .profil-navbar {
+    display: flex;
+    flex: 1 1 12rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  
+    height: 12rem;
+  
+    margin-right: 11.5rem;
+  }
+  
+
+  
+
+  
+  .profil-navbar > div {
+    width: 7rem;
+  }
+
+
+
+
+
+
+
+
+  
+
+  
+  /* ========================================================================== */
+  /* LOGIN SECTION */
+  /* ========================================================================== */
+  .section-login {
+    height: 65vh;
+  }
+  
+  .form-wrapper {
+    border: 1px solid var($disable-color);
+    border-radius: 15px;
+  
+    align-items: center;
+    text-align: center;
+  
+    margin: 5rem auto 0;
+  
+    /* width:50rem;
+    height: 50rem; */
+  
+    width: calc(150rem / var($size-divisor));
+    height: calc(150rem / var($size-divisor));
+  
+    min-height: calc(150rem / var($size-divisor));
+    max-height: calc(150rem / var($size-divisor));
+  
+    min-width: calc(150rem / var($size-divisor));
+    max-width: calc(150rem / var($size-divisor));
+  
+    position: relative;
+  }
+  
+  .form-head {
+    padding-top: 2rem;
+  }
+  
+  .form-container {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .form-elements {
+    width: 85%;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  .form-elements input[type="email"],
+  input[type="password"] {
+    transition: box-shadow 0.3s;
+  
+    border-radius: 4px;
+    border: 1px solid var($disable-color);
+    color: var($secondary-text-color);
+  
+    box-shadow: 0 1px #fff;
+    box-sizing: border-box;
+  
+    margin-top: 1.5rem;
+  
+    padding-left: 40px;
+  
+    height: 6rem;
+    width: 100%;
+  }
+  
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    box-shadow: 0 0 4px 1px rgba(55, 166, 155, 0.3);
+    outline: 0;
+  }
+  
+  .input-form {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+  
+  .button-form {
+    width: 85%;
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  button[type="submit"] {
+    background-color: var($primary-color);
+    background-image: linear-gradient(top, var($primary-color), #3111);
+    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px var($pusher-color),
+      0px 10px 5px #999;
+  
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 0px #317ea5;
+  
+    min-width: 4rem;
+  
+    min-height: 4rem;
+  
+    cursor: pointer;
+    border: none;
+  
+    width: 96%;
+    height: 6rem;
+  
+    border-radius: 6px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: var($pusher-color);
+    background-image: linear-gradient(top, #2c7ea7a2, #3111);
+    box-shadow: inset 0px 2px 0px #2c7ea7a2, 0px 3px 0px 0px #2c7ea7a2;
+  
+    /* background: var($pusher-color); */
+  }
+  
+  .remember-form {
+    margin-top: 1rem;
+  }
+  
+  .remember-form label {
+    color: var($secondary-text-color);
+  }
+  
+  .form-wrapper p {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 3rem;
+    color: var($secondary-text-color);
+  
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  /* ========================================================================== */
+  /* MAIN SECTION */
+  /* ========================================================================== */
+  
+  .section-cours{
+  
+    margin : 4rem 16.5%;
+    width: 67%;
+    display:flex;
+  
+  }
+  
+  hr{
+  
+   
+  }
+  
+  /* ========================================================================== */
+  /*  MY COURS SECTION */
+  /* ========================================================================== */
+  
+  .following-cours{
+  width: 100%;
+  font-size: 2rem;
+  }
+  
+  
+  table{
+    border-collapse: collapse;
+    width:100%;
+    height: 10rem;
+    border: 1px solid;
+    border-color: var($disable-color);
+  }
+  
+  
+  th{
+    border: 1px solid;
+    border-color: var($disable-color);
+  
+    color: var($secondary-color);
+  
+  
+  }
+  
+  .inprogress-tab th{
+    background-color: var($primary-color);
+  }
+  
+  .inprogress-tab th{
+    background-color: var($primary-color);
+  }
+  .finish-tab th{
+    background-color: var($validation-color);
+  }
+  
+  
+  td{
+    border: 1px solid;
+    border-color: var($disable-color);
+  }
+  
+  .inprogress-tab{
+  
+    margin-top: 2rem;
+  }
+  
+  
+  
+  .finish-tab{
+    margin-top: 2rem;
+  
+  }
+  
+  /* ========================================================================== */
+  /* RESPONSIVE  */
+  /* ========================================================================== */
+  /* Tablette */
+  
+  @media screen and (max-width: 1024px) {
+    .section-login {
+      height: 72vh;
+    }
+  
+    .basic-head img {
+      width: 40%;
+    }
+  
+    .section-login {
+      width: 100%;
+    }
+  
+    .form-wrapper {
+      margin-top: 6rem;
+      width: 150rem;
+      height: 15rem;
+    }
+  
+    .login-form input,
+    .password-form input,
+    .button-form button {
+      width: 95%;
+    }
+  
+    .login {
+      min-height: 70vh;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .section-login {
+      height: 62vh;
+    }
+  
+    .basic-head img {
+      width: 40%;
+    }
+  
+    .form-wrapper {
+      margin-top: 6rem;
+      width: 80%;
+      height: 80%;
+    }
+  
+    .login-form input,
+    .password-form input,
+    .button-form button {
+      width: 80%;
+    }
+  
+    .login {
+      min-height: 70vh;
+    }
+
+  }
+  
+  /* phone */
+  @media screen and (max-width: 480px) {
+    .section-login {
+      height: 68vh;
+    }
+  
+    .basic-head img {
+      width: 40%;
+    }
+  
+    .form-wrapper {
+      margin: 2rem;
+  
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+  
+      width: 80%;
+  
+      width: calc(100rem / var($size-divisor));
+      height: calc(100rem / var($size-divisor));
+  
+      min-height: calc(140rem / var($size-divisor));
+      max-height: calc(140rem / var($size-divisor));
+  
+      min-width: calc(100rem / var($size-divisor));
+      max-width: calc(100rem / var($size-divisor));
+    }
+  
+    .form-elements input[type="email"],
+    input[type="password"] {
+      margin-top: 1rem;
+    }
+  
+    .button-form {
+      width: 100%;
+    }
+  
+    .form-elements button[type="submit"] {
+      width: 100%;
+    }
+  
+    .form-elements {
+      width: 90%;
+    }
+  }
+  
+  @media screen and (max-height: 420px) {
+    .section-login {
+      text-align: center;
+    }
+    .form-wrapper {
+      margin: 2rem;
+  
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+  
+      width: 80%;
+  
+      width: calc(100rem / var($size-divisor));
+      height: calc(100rem / var($size-divisor));
+  
+      min-height: calc(140rem / var($size-divisor));
+      max-height: calc(140rem / var($size-divisor));
+  
+      min-width: calc(100rem / var($size-divisor));
+      max-width: calc(100rem / var($size-divisor));
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .login {
+      min-height: 140vh;
+    }
+    .form-wrapper {
+      min-height: 100vh;
+    }
+  
+
+  
+    .contact button {
+      width: 100%;
+      height: 4rem;
+      border-radius: 6px;
+    }
+  }
+  
+  @media screen and (max-width: 280px) {
+    .section-login {
+      width: calc(84rem / var($size-divisor));
+      height: calc(140rem / var($size-divisor));
+  
+      min-height: calc(90rem / var($size-divisor));
+      max-height: calc(140rem / var($size-divisor));
+  
+      min-width: calc(84rem / var($size-divisor));
+      max-width: calc(84rem / var($size-divisor));
+    }
+    .form-wrapper {
+      width: calc(84rem / var($size-divisor));
+      height: calc(140rem / var($size-divisor));
+  
+      min-height: calc(140rem / var($size-divisor));
+      max-height: calc(140rem / var($size-divisor));
+  
+      min-width: calc(84rem / var($size-divisor));
+      max-width: calc(84rem / var($size-divisor));
+    }
+  }  
