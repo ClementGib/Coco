@@ -12,12 +12,12 @@ export class VersionService {
 
   constructor(private http: HttpClient) {
     this.endpoints = new Map<string, Endpoint>([
-      ["GET version", new Endpoint('/version', ['GET'])]
+      ["version", new Endpoint('/version', ['GET'])]
     ]);
   }
 
   public getVersion(): Observable<string> {
-    const url = `${this.endpoints.get('GET version')?.root}`;
+    const url = `${this.endpoints.get('version')?.root}`;
     return this.http.get(url, {responseType: 'text'})
   }
 }

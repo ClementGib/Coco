@@ -1,10 +1,10 @@
-  <nav class="main-navbar" [ngClass]="{'multiple-navbar': isCourses()}"  >
+  <nav class="main-navbar" [ngClass]="{'multiple-navbar': isCourses}"  >
     <img
       class="logo-navbar"
       src="../../../../assets/icons/logo-white.svg"
       alt="Logo"
     />
-    <div class="cours-navbar">
+    <div class="courses-navbar">
       <a class="link-navbar" routerLink="/courses" 
       routerLinkActive="active-link" 
       [routerLinkActiveOptions]="{exact: false}">
@@ -15,7 +15,7 @@
     <div class="search-navbar">
       <input placeholder="Rechercher" type="text" class="input-navbar" />
     </div>
-    <!-- TODO Role management Profil/Admin -->
+    <!-- TODO Role management profile/Admin -->
     <div class="submenu-navbar">
       <div class="admin-navbar">
         <a class="link-navbar" routerLink="/admin" 
@@ -25,8 +25,8 @@
         </a>
       </div>
 
-      <div class="profil-navbar">
-        <a class="link-navbar" routerLink="/profil" 
+      <div class="profile-navbar">
+        <a class="link-navbar" routerLink="/profile" 
         routerLinkActive="active-link">
           <span>Profil</span>
           <hr/>

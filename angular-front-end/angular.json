@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "coco-front-end": {
+    "angular-front": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/coco-front-end",
+            "outputPath": "dist/angular-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -33,13 +33,12 @@
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },
-           "styles": [
-            "src/styles/styles.scss",
-            "src/styles/variables.scss",
-            "node_modules/swagger-ui/dist/swagger-ui.css"
-          ],
-            "scripts": [
-            ]
+            "styles": [
+              "src/styles/styles.scss",
+              "src/styles/variables.scss",
+              "node_modules/swagger-ui/dist/swagger-ui.css"
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -81,10 +80,10 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "coco-front-end:build:production"
+              "browserTarget": "angular-front:build:production"
             },
             "development": {
-              "browserTarget": "coco-front-end:build:development"
+              "browserTarget": "angular-front:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -92,7 +91,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "coco-front-end:build"
+            "browserTarget": "angular-front:build"
           }
         },
         "test": {
@@ -104,7 +103,8 @@
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles/styles.scss",
@@ -115,6 +115,5 @@
         }
       }
     }
-  },
-  "defaultProject": "coco-front-end"
+  }
 }
