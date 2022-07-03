@@ -10,7 +10,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-import com.cdx.coco.core.tutorial.TutorialEntity;
+import com.cdx.coco.core.course.CourseEntity;
 
 @Entity
 @Table(schema = "cocoapp", name = "categories", uniqueConstraints = @UniqueConstraint(columnNames = "name"))
@@ -23,7 +23,7 @@ public class CategoryEntity {
 	String description;
 	
     @ManyToMany(mappedBy = "categories")
-    private Set<TutorialEntity> tutorials = new HashSet<TutorialEntity>();
+    private Set<CourseEntity> courses = new HashSet<CourseEntity>();
 
 	public String getName() {
 		return name;
@@ -41,11 +41,11 @@ public class CategoryEntity {
 		this.description = description;
 	}
 
-	public Set<TutorialEntity> getTutorials() {
-		return tutorials;
+	public Set<CourseEntity> getCourses() {
+		return courses;
 	}
 
-	public void setTutorials(Set<TutorialEntity> tutorials) {
-		this.tutorials = tutorials;
+	public void setCourses(Set<CourseEntity> courses) {
+		this.courses = courses;
 	}
 }

@@ -20,8 +20,8 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 import com.cdx.coco.core.comment.CommentEntity;
+import com.cdx.coco.core.course.CourseEntity;
 import com.cdx.coco.core.post.PostEntity;
-import com.cdx.coco.core.tutorial.TutorialEntity;
 
 /**
  * @author Clément Gibert
@@ -41,8 +41,8 @@ public class PageEntity {
 	Integer position;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "tutorial_id", nullable = false) 
-    private TutorialEntity tutorial;
+	@JoinColumn(name = "course_id", nullable = false) 
+    private CourseEntity course;
 	
 	@Column(name = "title", nullable = false)
 	String title;
@@ -77,12 +77,12 @@ public class PageEntity {
 		this.position = position;
 	}
 
-	public TutorialEntity getTutorial() {
-		return tutorial;
+	public CourseEntity getCourse() {
+		return course;
 	}
 
-	public void setTutorial(TutorialEntity tutorial) {
-		this.tutorial = tutorial;
+	public void setCourse(CourseEntity course) {
+		this.course = course;
 	}
 
 	public String getTitle() {

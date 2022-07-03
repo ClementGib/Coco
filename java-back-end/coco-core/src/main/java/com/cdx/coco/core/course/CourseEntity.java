@@ -1,4 +1,4 @@
-package com.cdx.coco.core.tutorial;
+package com.cdx.coco.core.course;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -24,13 +24,13 @@ import com.cdx.coco.core.page.PageEntity;
 
 
 @Entity
-@Table(schema = "cocoapp", name = "tutorials", uniqueConstraints = @UniqueConstraint(columnNames = "tutorial_id")) 
-public class TutorialEntity {
+@Table(schema = "cocoapp", name = "courses", uniqueConstraints = @UniqueConstraint(columnNames = "course_id")) 
+public class CourseEntity {
 
 	@Id
-	@Column(name = "tutorial_id", nullable = false)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tutorials_tutorial_id_seq_gen")
-	@SequenceGenerator(name = "tutorials_tutorial_id_seq_gen", sequenceName = "tutorials_tutorial_id_seq", allocationSize = 1, initialValue = 1)
+	@Column(name = "course_id", nullable = false)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "courses_course_id_seq_gen")
+	@SequenceGenerator(name = "courses_course_id_seq_gen", sequenceName = "courses_course_id_seq", allocationSize = 1, initialValue = 1)
 	private Integer id;
 
 	@Column(name = "title", nullable = false)
@@ -48,12 +48,12 @@ public class TutorialEntity {
 	@Column(name = "like_count", nullable = false)
 	private Integer likeCount;
 
-	@OneToMany(mappedBy = "tutorial", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "courses", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<PageEntity> pages = new ArrayList<>();
 	
 	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-	@JoinTable(name = "tutorials_categories",
-	           joinColumns = @JoinColumn(name = "tutorial_id"),
+	@JoinTable(name = "courses_categories",
+	           joinColumns = @JoinColumn(name = "course_id"),
 	           inverseJoinColumns = @JoinColumn(name = "category_name"))
 	private Set<CategoryEntity> categories = new HashSet<CategoryEntity>();
 

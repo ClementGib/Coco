@@ -14,7 +14,7 @@ public class Page {
 	
 	Integer position;
 	
-	Integer tutorialId;
+	Integer courseId;
 	
 	Instant updateDate;
 	
@@ -44,12 +44,12 @@ public class Page {
 		this.position = position;
 	}
 
-	public Integer getTutorialId() {
-		return tutorialId;
+	public Integer getCourseId() {
+		return courseId;
 	}
 
-	public void setTutorialId(Integer tutorialId) {
-		this.tutorialId = tutorialId;
+	public void setCourseId(Integer courseId) {
+		this.courseId = courseId;
 	}
 
 	public Instant getUpdateDate() {

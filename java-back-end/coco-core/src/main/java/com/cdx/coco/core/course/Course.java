@@ -1,10 +1,10 @@
-package com.cdx.coco.core.tutorial;
+package com.cdx.coco.core.course;
 
 import java.util.Set;
 
 import com.cdx.coco.core.category.Category;
 
-public class Tutorial {
+public class Course {
 
 	int id;
 	

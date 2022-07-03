@@ -10,8 +10,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.cdx.coco.core.category.CategoryRepository;
+import com.cdx.coco.core.course.CourseRepository;
 import com.cdx.coco.core.page.PageRepository;
-import com.cdx.coco.core.tutorial.TutorialRepository;
 import com.cdx.coco.core.user.UserRepository;
 
 
@@ -23,7 +23,7 @@ public class CoreTesting {
 	CategoryRepository categoryRepository;
 	
 	@Inject
-	TutorialRepository tutorialRepository;
+	CourseRepository courseRepository;
 	
 	@Inject
 	UserRepository userRepository;
