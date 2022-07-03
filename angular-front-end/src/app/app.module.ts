@@ -1,22 +1,24 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AdminModule } from './admin/admin.module';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoursesModule } from './courses/courses.module';
-import { AdminModule } from './admin/admin.module';
-import { SharedModule } from '@shared/shared.module';
-import { HttpClientModule } from '@angular/common/http';
+import { CourseModule } from './course/course.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    CoursesModule,
+    CourseModule,
     AdminModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

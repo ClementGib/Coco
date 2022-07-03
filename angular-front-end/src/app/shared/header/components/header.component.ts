@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  
+  public isCourses: boolean = false;
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
+  constructor(private router: Router) { 
+    this.router.events.subscribe((event) => {
+      if(event instanceof NavigationEnd) {
+        this.isCourses = event.url.includes('/courses' ) ? true : false;
+      }
+    });
   }
 
-  isCourses() {
-    return this.router.url.includes("/courses");
+  ngOnInit(): void {
+    this.isCourses = this.router.url.includes('/courses');
   }
 }
