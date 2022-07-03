@@ -1,13 +1,7 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "src",
-    "paths": {
-      "@env": ["environments/environment"],
-      "@shared/*": ["app/shared/*"],
-      "@core/*": ["app/core/*"]
-    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -21,13 +15,24 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
+    "target": "es2020",
     "module": "es2020",
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@env": ["environments/environment"],
+      "@admin/*": ["app/admin/*"],
+      "@core/*": ["app/core/*"],
+      "@course/*": ["app/course/*"],
+      "@login/*": ["app/login/*"],
+      "@profile/*": ["app/profile/*"],
+      "@shared/*": ["app/shared/*"]
+    },
+    "allowSyntheticDefaultImports": true
   },
+  "include": ["src/app/core/sevices"],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

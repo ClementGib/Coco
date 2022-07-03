@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1656877704636" clover="3.2.0">
+  <project timestamp="1656877704636" name="All files">
+    <metrics statements="107" coveredstatements="98" conditionals="17" coveredconditionals="7" methods="31" coveredmethods="16" elements="155" coveredelements="121" complexity="0" loc="107" ncloc="107" packages="15" files="26" classes="26"/>
+    <package name="angular-front-end">
+      <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="jest-global-mocks.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/jest-global-mocks.ts">
+        <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app">
+      <metrics statements="13" coveredstatements="11" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="app.component.html" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/app.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="app.component.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/app.component.ts">
+        <metrics statements="12" coveredstatements="10" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.core.sevices.REST.endpoint">
+      <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <file name="endpoint.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/core/sevices/REST/endpoint/endpoint.ts">
+        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.core.sevices.REST.version">
+      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="version.service.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/core/sevices/REST/version/version.service.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="20" count="7" type="cond" truecount="3" falsecount="1"/>
+        <line num="21" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.core.sevices.authentification">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="auth.service.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/core/sevices/authentification/auth.service.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.course">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="course-routing.module.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/course/course-routing.module.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="course.module.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/course/course.module.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.course.components">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="course.component.html" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/course/components/course.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="course.component.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/course/components/course.component.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.course.components.all-courses">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="all-courses.component.html" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/course/components/all-courses/all-courses.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="all-courses.component.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/course/components/all-courses/all-courses.component.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.course.components.suggestion">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="suggestion.component.html" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/course/components/suggestion/suggestion.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="suggestion.component.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/course/components/suggestion/suggestion.component.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.shared">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/index.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="shared.module.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/shared.module.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.shared.button-underline">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="button-underline.component.html" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/button-underline/button-underline.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="button-underline.component.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/button-underline/button-underline.component.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.shared.footer">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="footer.component.html" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/footer/footer.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="footer.component.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/footer/footer.component.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="22" type="stmt"/>
+        <line num="13" count="22" type="stmt"/>
+        <line num="16" count="18" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.shared.header.components">
+      <metrics statements="10" coveredstatements="8" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <file name="header.component.html" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/header/components/header.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="header.component.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/header/components/header.component.ts">
+        <metrics statements="9" coveredstatements="7" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="14" count="12" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.shared.header.components.main-navbar">
+      <metrics statements="13" coveredstatements="11" conditionals="7" coveredconditionals="4" methods="5" coveredmethods="3"/>
+      <file name="main-navbar.component.html" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/header/components/main-navbar/main-navbar.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+      </file>
+      <file name="main-navbar.component.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/header/components/main-navbar/main-navbar.component.ts">
+        <metrics statements="12" coveredstatements="10" conditionals="7" coveredconditionals="4" methods="5" coveredmethods="3"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="11" count="22" type="stmt"/>
+        <line num="12" count="22" type="stmt"/>
+        <line num="13" count="22" type="stmt"/>
+        <line num="15" count="22" type="stmt"/>
+        <line num="16" count="22" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="18" type="stmt"/>
+        <line num="29" count="1" type="cond" truecount="4" falsecount="0"/>
+      </file>
+    </package>
+    <package name="angular-front-end.src.app.shared.header.components.sub-navbar">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="sub-navbar.component.html" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/header/components/sub-navbar/sub-navbar.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+      </file>
+      <file name="sub-navbar.component.ts" path="/home/xzem/Dev/project/Coco/angular-front-end/src/app/shared/header/components/sub-navbar/sub-navbar.component.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
