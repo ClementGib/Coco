@@ -1,0 +1,31 @@
+<nav class="sub-navbar">
+  <div class="container-subnavbar">
+    <div class="allcours-subnavbar">
+      <a class="link-navbar"
+      routerLink="/courses/all" 
+      routerLinkActive="active-sublink" 
+      [routerLinkActiveOptions]="{exact: true}">
+        <span>Tous les cours</span>
+        <hr/>
+      </a>
+    </div>
+
+    <div class="mycours-subnavbar">
+      <a class="link-navbar" routerLink="/courses" 
+      routerLinkActive="active-sublink" 
+      [routerLinkActiveOptions]="{exact: true}">
+        <span>Mes cours</span>
+        <hr/>
+      </a>
+    </div>
+
+    <div class="suggestion-subnavbar">
+      <a class="link-navbar" routerLink="/courses/suggestion" 
+      routerLinkActive="active-sublink" 
+      [routerLinkActiveOptions]="{exact: false}">
+        <span>Suggestion</span>
+        <hr/>
+      </a>
+    </div>
+  </div>
+</nav>
