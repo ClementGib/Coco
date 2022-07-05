@@ -1,0 +1,15 @@
+openapi: 3.0.0
+prettyPrint: true
+cacheTTL: 0
+openAPI:
+    info:
+        version: '0.0.1'
+        title: Coco web API config file
+        description: Coco web APIs are used for teaching technical courses
+    contact:
+        email: cdx.it.contact@gmail.com
+    license:
+        name: Apache 2.0
+        url: http://www.apache.org/licenses/LICENSE-2.0.html
+    servers:
+        - url: /coco

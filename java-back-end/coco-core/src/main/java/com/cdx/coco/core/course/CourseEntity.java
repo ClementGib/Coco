@@ -48,7 +48,7 @@ public class CourseEntity {
 	@Column(name = "like_count", nullable = false)
 	private Integer likeCount;
 
-	@OneToMany(mappedBy = "courses", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<PageEntity> pages = new ArrayList<>();
 	
 	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })

@@ -1,4 +1,4 @@
-package com.cdx.coco.core.post;
+package com.cdx.coco.api.post;
 
 import java.time.Instant;
 
