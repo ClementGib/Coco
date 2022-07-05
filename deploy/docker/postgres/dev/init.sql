@@ -46,25 +46,25 @@ SET search_path TO cocoapp;
 	CONSTRAINT pk_categories PRIMARY KEY (name)
 	);
 	
--- CREATE tutorials TABLE --
-	CREATE TABLE cocoapp.tutorials
+-- CREATE courses TABLE --
+	CREATE TABLE cocoapp.courses
 (
-	tutorial_id SERIAL UNIQUE NOT NULL,
+	course_id SERIAL UNIQUE NOT NULL,
 	title varchar(255) UNIQUE NOT NULL,
 	author varchar(255) NOT NULL,
 	description text NOT NULL,
 	image_name varchar(255),
 	like_count integer NOT NULL,
-	CONSTRAINT pk_tutorials PRIMARY KEY (tutorial_id)
+	CONSTRAINT pk_courses PRIMARY KEY (course_id)
 	);
 
-	-- CREATE tutorials_categories TABLE --
-	CREATE TABLE cocoapp.tutorials_categories
+	-- CREATE courses_categories TABLE --
+	CREATE TABLE cocoapp.courses_categories
 (
-	tutorial_id integer UNIQUE NOT NULL,
+	course_id integer UNIQUE NOT NULL,
 	category_name varchar(255) NOT NULL,
-	PRIMARY KEY (tutorial_id, category_name),
-	CONSTRAINT fk_tutorial_id FOREIGN KEY(tutorial_id) REFERENCES cocoapp.tutorials(tutorial_id),
+	PRIMARY KEY (course_id, category_name),
+	CONSTRAINT fk_course_id FOREIGN KEY(course_id) REFERENCES cocoapp.courses(course_id),
 	CONSTRAINT fk_category_name FOREIGN KEY(category_name) REFERENCES cocoapp.categories(name)
 	);
 
@@ -72,13 +72,13 @@ SET search_path TO cocoapp;
 	CREATE TABLE cocoapp.pages
 	(
 	page_id SERIAL UNIQUE NOT NULL, 
-	tutorial_id integer NOT NULL,
+	course_id integer NOT NULL,
 	position integer NOT NULL,
 	title text NOT NULL,
 	creation_date timestamp NOT NULL,
 	update_date timestamp NOT NULL,
 	CONSTRAINT pk_pages PRIMARY KEY (page_id),
-	CONSTRAINT fk_pages_tutorials FOREIGN KEY(tutorial_id) REFERENCES cocoapp.tutorials(tutorial_id)
+	CONSTRAINT fk_pages_courses FOREIGN KEY(course_id) REFERENCES cocoapp.courses(course_id)
 	);
 	
 -- CREATE posts TABLE --
@@ -138,8 +138,8 @@ GRANT SELECT, UPDATE, USAGE ON ALL SEQUENCES IN SCHEMA cocoapp to cocoadm;
 GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE comments TO cocoweb;
 GRANT SELECT, UPDATE, USAGE ON "comments_comment_id_seq" TO cocoweb;
 
-GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE tutorials TO cocoweb;
-GRANT SELECT, UPDATE, USAGE ON "tutorials_tutorial_id_seq" TO cocoweb;
+GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE courses TO cocoweb;
+GRANT SELECT, UPDATE, USAGE ON "courses_course_id_seq" TO cocoweb;
 
 GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE pages TO cocoweb;
 GRANT SELECT, UPDATE, USAGE ON "pages_page_id_seq" TO cocoweb;
@@ -149,4 +149,4 @@ GRANT SELECT, UPDATE, USAGE ON "posts_post_id_seq" TO cocoweb;
 
 GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE categories TO cocoweb;
 GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE dictionnaries TO cocoweb;
-GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE tutorials_categories TO cocoweb;
+GRANT SELECT, UPDATE, INSERT , DELETE ON TABLE courses_categories TO cocoweb;

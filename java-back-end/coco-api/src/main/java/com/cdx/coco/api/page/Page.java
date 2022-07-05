@@ -1,4 +1,4 @@
-package com.cdx.coco.core.page;
+package com.cdx.coco.api.page;
 
 import java.time.Instant;
 

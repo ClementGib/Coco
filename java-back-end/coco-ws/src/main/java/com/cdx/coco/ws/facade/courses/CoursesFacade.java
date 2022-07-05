@@ -1,5 +1,6 @@
 package com.cdx.coco.ws.facade.courses;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.ws.rs.GET;
@@ -11,6 +12,7 @@ import javax.ws.rs.core.Response;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tags;
@@ -19,15 +21,27 @@ import io.swagger.v3.oas.annotations.tags.Tags;
 @Path("courses")
 public interface CoursesFacade {
 
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	@Operation(summary = "Get all courses",
-			description = "REST Endpoint that returns all courses")
-	@ApiResponses(value = {
-		    @ApiResponse(responseCode = "200",description = "Provides entry names and weights matching query parameters as properties in a json",
-		                 content = @Content(schema = @Schema(implementation = Map.class))),
-		    @ApiResponse(responseCode = "400", description = "One of the query parameters has a bad value"),
-		    @ApiResponse(responseCode = "500", description = "")
-		})
-	Response findAll();
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Get all courses without the details",
+            description = "REST Endpoint that returns all courses without the course content")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200",description = "All the courses found without their content",
+                         content = @Content(mediaType = MediaType.APPLICATION_JSON,
+                         array = @ArraySchema(schema = @Schema(implementation = CourseShrinksDTO.class))))
+        })
+    Response findAll();
+    
+    
+//    @GET
+//    @Path("{id}")
+//    @Produces(MediaType.APPLICATION_JSON)
+//    @Operation(summary = "Get specific course",
+//            description = "REST Endpoint that returns course from id")
+//    @ApiResponses(value = {
+//            @ApiResponse(responseCode = "200",description = "Course found from the id",
+//                         content = @Content(schema = @Schema(implementation = Map.class))),
+//            @ApiResponse(responseCode = "400", description = "Id does not match to any course"),
+//        })
+//    Response find();
 }
