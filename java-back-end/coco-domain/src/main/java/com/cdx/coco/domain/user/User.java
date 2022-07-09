@@ -1,4 +1,4 @@
-package com.cdx.coco.api.user;
+package com.cdx.coco.domain.user;
 
 import java.time.Instant;
 import java.time.LocalDate;

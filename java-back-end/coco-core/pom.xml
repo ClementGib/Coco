@@ -18,7 +18,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.cdx.coco</groupId>
-			<artifactId>coco-api</artifactId>
+			<artifactId>coco-domain</artifactId>
 			<type>ejb</type>
 		</dependency>
 		<!-- ~~~~~~~~~~~~~~~ -->

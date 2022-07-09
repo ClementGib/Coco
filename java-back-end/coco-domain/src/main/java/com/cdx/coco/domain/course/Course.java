@@ -1,10 +1,10 @@
-package com.cdx.coco.api.course;
+package com.cdx.coco.domain.course;
 
 import java.util.List;
 import java.util.Set;
 
-import com.cdx.coco.api.category.Category;
-import com.cdx.coco.api.page.Page;
+import com.cdx.coco.domain.category.Category;
+import com.cdx.coco.domain.page.Page;
 
 
 public class Course {

@@ -4,8 +4,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import com.cdx.coco.api.course.Course;
-import com.cdx.coco.api.course.CourseService;
+import com.cdx.coco.domain.course.Course;
+import com.cdx.coco.domain.course.CourseService;
 
 public class CourseServiceImpl implements CourseService {
 

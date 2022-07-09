@@ -1,4 +1,4 @@
-package com.cdx.coco.core.repository;
+package com.cdx.coco.domain.repository;
 
 import java.io.Serializable;
 import java.util.List;

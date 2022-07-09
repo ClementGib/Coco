@@ -10,9 +10,9 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>coco-domain</module>
 		<module>coco-core</module>
-		<module>coco-api</module>
-		<module>coco-ws</module>
+		<module>coco-client</module>
 		<module>coco-tools</module>
 		<module>coco-ear</module>
 	</modules>
@@ -43,19 +43,19 @@
 			<!-- Coco -->
 			<dependency>
 				<groupId>com.cdx.coco</groupId>
+				<artifactId>coco-domain</artifactId>
+				<version>${project.version}</version>
+				<type>ejb</type>
+			</dependency>
+			<dependency>
+				<groupId>com.cdx.coco</groupId>
 				<artifactId>coco-core</artifactId>
 				<version>${project.version}</version>
 				<type>ejb</type>
 			</dependency>
 			<dependency>
 				<groupId>com.cdx.coco</groupId>
-				<artifactId>coco-api</artifactId>
-				<version>${project.version}</version>
-				<type>ejb</type>
-			</dependency>
-			<dependency>
-				<groupId>com.cdx.coco</groupId>
-				<artifactId>coco-ws</artifactId>
+				<artifactId>coco-client</artifactId>
 				<type>war</type>
 				<version>${project.version}</version>
 			</dependency>

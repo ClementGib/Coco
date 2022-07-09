@@ -1,6 +1,6 @@
 package com.cdx.coco.core.user;
 
-import com.cdx.coco.core.repository.GenericRepostory;
+import com.cdx.coco.domain.repository.GenericRepostory;
 
 /***
  * specific dao interface for users

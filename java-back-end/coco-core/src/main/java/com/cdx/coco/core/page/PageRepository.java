@@ -1,6 +1,6 @@
 package com.cdx.coco.core.page;
 
-import com.cdx.coco.core.repository.GenericRepostory;
+import com.cdx.coco.domain.repository.GenericRepostory;
 
 
 /***

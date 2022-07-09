@@ -8,9 +8,11 @@ import java.util.Optional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import com.cdx.coco.domain.repository.GenericRepostory;
+
 import org.hibernate.Session;
 
-public abstract class GenericBaseRepository<T, PK extends Serializable> implements GenericRepostory<T, PK>{
+public abstract class JPARepository<T, PK extends Serializable> implements GenericRepostory<T, PK>{
 	
 	private Class<T> persistentClass;
 	
@@ -18,7 +20,7 @@ public abstract class GenericBaseRepository<T, PK extends Serializable> implemen
 	private EntityManager entityManager;
 	
 	@SuppressWarnings("unchecked")
-	public GenericBaseRepository() {
+	public JPARepository() {
 		this.persistentClass = (Class<T>) ((ParameterizedType) getClass()
 				.getGenericSuperclass())
 				.getActualTypeArguments()[0];

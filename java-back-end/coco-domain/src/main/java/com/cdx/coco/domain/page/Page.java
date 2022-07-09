@@ -1,4 +1,4 @@
-package com.cdx.coco.api.page;
+package com.cdx.coco.domain.page;
 
 import java.time.Instant;
 

@@ -1,6 +1,6 @@
 package com.cdx.coco.core.category;
 
-import com.cdx.coco.core.repository.GenericRepostory;
+import com.cdx.coco.domain.repository.GenericRepostory;
 
 /***
  * specific dao interface for categories

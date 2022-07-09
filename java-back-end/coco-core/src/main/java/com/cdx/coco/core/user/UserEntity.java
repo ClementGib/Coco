@@ -22,7 +22,7 @@ import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
-import com.cdx.coco.api.user.Role;
+import com.cdx.coco.domain.user.Role;
 import com.cdx.coco.core.comment.CommentEntity;
 import com.vladmihalcea.hibernate.type.json.JsonType;
 

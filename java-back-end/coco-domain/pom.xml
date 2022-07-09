@@ -9,8 +9,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>coco-api</artifactId>
-	<name>coco-api</name>
+	<artifactId>coco-domain</artifactId>
+	<name>coco-domain</name>
 	<url>http://www.clement-gibert.com/</url>
 
 	<packaging>ejb</packaging>

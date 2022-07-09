@@ -1,4 +1,4 @@
-package com.cdx.coco.api.user;
+package com.cdx.coco.domain.user;
 
 public enum Role {
 	GUEST,

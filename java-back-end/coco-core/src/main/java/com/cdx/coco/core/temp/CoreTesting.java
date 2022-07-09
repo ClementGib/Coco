@@ -13,7 +13,7 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.cdx.coco.api.user.Role;
+import com.cdx.coco.domain.user.Role;
 import com.cdx.coco.core.category.CategoryRepository;
 import com.cdx.coco.core.course.CourseRepository;
 import com.cdx.coco.core.page.PageRepository;

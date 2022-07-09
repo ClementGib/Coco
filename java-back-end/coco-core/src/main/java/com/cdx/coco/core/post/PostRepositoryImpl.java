@@ -4,7 +4,7 @@ import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
 
-import com.cdx.coco.core.repository.GenericBaseRepository;
+import com.cdx.coco.core.repository.JPARepository;
 
 /***
  * Implementation of generic DAO to manage persistence for posts
@@ -14,6 +14,6 @@ import com.cdx.coco.core.repository.GenericBaseRepository;
  */
 @Stateless
 @TransactionAttribute(TransactionAttributeType.MANDATORY)
-public class PostRepositoryImpl extends GenericBaseRepository<PostEntity, Integer> implements PostRepository {
+public class PostRepositoryImpl extends JPARepository<PostEntity, Integer> implements PostRepository {
 
 }
