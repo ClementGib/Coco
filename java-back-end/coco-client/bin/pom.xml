@@ -9,8 +9,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>coco-ws</artifactId>
-	<name>coco-ws</name>
+	<artifactId>coco-client</artifactId>
+	<name>coco-client</name>
 	<url>http://www.clement-gibert.com/</url>
 
 	<packaging>war</packaging>

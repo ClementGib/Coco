@@ -22,7 +22,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.cdx.coco</groupId>
-			<artifactId>coco-core</artifactId>
+			<artifactId>coco-application</artifactId>
 			<type>ejb</type>
 		</dependency>
 		<dependency>
