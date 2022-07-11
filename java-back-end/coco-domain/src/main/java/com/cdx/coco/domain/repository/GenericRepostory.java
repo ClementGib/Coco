@@ -1,7 +1,6 @@
 package com.cdx.coco.domain.repository;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.Optional;
 
 import org.hibernate.Session;
@@ -30,14 +29,6 @@ public interface GenericRepostory<T, PK extends Serializable> {
 	 * @return read entity object
 	 */
 	Optional<T> findById(PK id);
-
-	/**
-	 * Read all entities objects <T> into the repository
-	 * 
-	 * @param entity
-	 * @return all entities objects in a list
-	 */
-	List<T> findAll();
 
 	/**
 	 * Update an entity object <T> into the repository

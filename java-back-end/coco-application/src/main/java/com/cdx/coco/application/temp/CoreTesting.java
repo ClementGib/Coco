@@ -49,19 +49,19 @@ public class CoreTesting {
 	public void tester() {
 		
 		LOGGER.info("CoreTesting is running!");
-		List<UserEntity> users = userRepository.findAll();
-		if(users.isEmpty()) {
-			UserEntity user = new UserEntity();
-			user.setBirthday(LocalDate.now());
-			user.setUsername("clem");
-			user.setEmail("test.fr");
-			user.setPassword("MDP");
-			user.setCreationDate(Instant.now());
-			user.setRole(Role.GUEST);
-			user.setHistory("{}");
-			userRepository.add(user);
-		} else {
-			LOGGER.info("User ID: " + users.get(0).getId());
-		}
+//		List<UserEntity> users = userRepository.findAll();
+//		if(users.isEmpty()) {
+//			UserEntity user = new UserEntity();
+//			user.setBirthday(LocalDate.now());
+//			user.setUsername("clem");
+//			user.setEmail("test.fr");
+//			user.setPassword("MDP");
+//			user.setCreationDate(Instant.now());
+//			user.setRole(Role.GUEST);
+//			user.setHistory("{}");
+//			userRepository.add(user);
+//		} else {
+//			LOGGER.info("User ID: " + users.get(0).getId());
+//		}
 	}
 }

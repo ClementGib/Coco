@@ -51,10 +51,12 @@ SET search_path TO cocoapp;
 (
 	course_id SERIAL UNIQUE NOT NULL,
 	title varchar(255) UNIQUE NOT NULL,
-	author varchar(255) NOT NULL,
+	author varchar(50) NOT NULL,
+	introduction varchar(50) NOT NULL,
 	description text NOT NULL,
-	image_name varchar(255),
+	creation_date timestamp NOT NULL,
 	like_count integer NOT NULL,
+	image_id SERIAL,
 	CONSTRAINT pk_courses PRIMARY KEY (course_id)
 	);
 

@@ -1,15 +1,15 @@
 ## <u> Docker steps</u> 🐋
 
-<p>Steps to launch all the containers usefull. Don't forget to securise them !</p>
-
+Steps to launch all the usefull containers for the project. 
+Don't forget to securise them !
 #### requirement :
-- jdk-11.0.10_linux-x64_bin.deb
+- openjdk-17.0.2_linux-x64_bin
 - wildfly-preview-23.0.2.Final.zip
 - postgresql-42.2.20.jar
 <br>
 
 
-### Postegre container (Dev) 🐘
+### PostegreSQL container (Dev) 🐘
 📁 into the "postgres" directory
 ```bash 
 docker build -t postgres-dev dev/
@@ -30,7 +30,7 @@ psql -h 192.168.1.50 -p 5430 -U postgre
 <br>
 
 ### pgAdmin container 🧿
-from *dpage/pgadmin*
+base on **dpage/pgadmin** container
 ```bash 
 docker run -p 8081:80 -e 'PGADMIN_DEFAULT_EMAIL=<my-email>' -e 'PGADMIN_DEFAULT_PASSWORD=<my-password>' -d --name=ui-pgadmin dpage/pgadmin4
 ```
@@ -45,7 +45,7 @@ __To change password__ : "my-email@gmail.com" ➡️ Change password
 
 <br>
     
-### Wildfly 23.0.2.Final server ☕
+### Wildfly 23.0.2.Final server ☕ 
 📁 into the "docker" directory
 
 ```bash 

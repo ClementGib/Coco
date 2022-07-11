@@ -1,64 +1,74 @@
 package com.cdx.coco.client.facade.courses;
 
-public class CoursePreviewDTO {
-    
-    private Integer id;
-    
-    private String title;
-    
-    private String author;
+import java.time.Instant;
 
-    private String description;
-    
-    private String imageId;
+public record CoursePreviewDTO(Integer id, 
+        String title, 
+        String author, 
+        String introduction, 
+        String description,
+        Instant creationDate, 
+        Integer likeCount, 
+        String imageId) {
 
-    private Integer likeCount;
-
-    public Integer getId() {
-        return id;
+    private CoursePreviewDTO(Builder builder) {
+        this(builder.id, builder.title, 
+                builder.author, builder.introduction, 
+                builder.description, builder.creationDate,
+                builder.likeCount, builder.imageId);
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public static class Builder {
+        private Integer id;
+        private String title;
+        private String author;
+        private String introduction;
+        private String description;
+        private Instant creationDate;
+        private Integer likeCount;
+        private String imageId;
 
-    public String getTitle() {
-        return title;
-    }
+        public Builder(final Integer id) {
+            this.id = id;
+        }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+        public Builder title(final String title) {
+            this.title = title;
+            return this;
+        }
 
-    public String getAuthor() {
-        return author;
-    }
+        public Builder author(final String author) {
+            this.author = author;
+            return this;
+        }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+        public Builder introduction(final String introduction) {
+            this.introduction = introduction;
+            return this;
+        }
 
-    public String getDescription() {
-        return description;
-    }
+        public Builder description(final String description) {
+            this.description = description;
+            return this;
+        }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+        public Builder creationDate(final Instant creationDate) {
+            this.creationDate = creationDate;
+            return this;
+        }
 
-    public String getImageId() {
-        return imageId;
-    }
+        public Builder likeCount(final Integer likeCount) {
+            this.likeCount = likeCount;
+            return this;
+        }
 
-    public void setImageId(String imageId) {
-        this.imageId = imageId;
-    }
+        public Builder imageId(final String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
 
-    public Integer getLikeCount() {
-        return likeCount;
-    }
-
-    public void setLikeCount(Integer likeCount) {
-        this.likeCount = likeCount;
+        public CoursePreviewDTO build() throws IllegalStateException {
+            return new CoursePreviewDTO(this);
+        }
     }
 }

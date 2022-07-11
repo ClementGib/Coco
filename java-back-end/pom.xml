@@ -170,6 +170,11 @@
 				<artifactId>snakeyaml</artifactId>
 				<version>${snakeyaml.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>net.dv8tion</groupId>
+				<artifactId>JDA</artifactId>
+				<version>5.0.0-alpha.13</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 

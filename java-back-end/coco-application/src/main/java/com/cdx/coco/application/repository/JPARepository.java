@@ -2,7 +2,6 @@ package com.cdx.coco.application.repository;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
-import java.util.List;
 import java.util.Optional;
 
 import javax.persistence.EntityManager;
@@ -46,12 +45,6 @@ public abstract class JPARepository<T, PK extends Serializable> implements Gener
 			return Optional.empty();
 		}
 		return Optional.ofNullable(entityManager.find(getPersistentClass(), id));
-	}
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<T> findAll(){
-		return entityManager.createQuery("SELECT e FROM " + persistentClass.getSimpleName() + " e").getResultList();
 	}
 
 	@Override

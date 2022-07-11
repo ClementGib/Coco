@@ -8,18 +8,18 @@
 
 
 ## Stack: 🧱 
-**Backend:** Java monolithic RESTfull web services
+**Backend:** JEE Hexagonal architecture with RESTfull web services
 **Frontend:** Angular web app
 
 ### Backend: ⚙️
-* **Java version :** Jakarta EE 8 & Java 11
-* **JDK :** OpenJDK 11 (VM 18.9)
-* **Maven :** Multi-Module project
+* **Java version :** Jakarta EE 8 & Java 17
+* **JDK :** OpenJDK 17.0.3
+* **Maven 3.8.6 :** Multi-Module project
 * **Database :** PostgreSQL
 * **Server :** Jboss Wildfly 23.0.2
 
 ### Frontend: 🖥️ 
-* **Angular 13.1.1**
+* **Angular2+:** 14.0.0
 * **CSS3 + Sass**
 * **Rich-Text Editor:** ckeditor 
 * **Jest**
