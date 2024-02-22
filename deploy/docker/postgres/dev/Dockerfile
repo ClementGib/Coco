@@ -1,14 +1,14 @@
 #DEV
 
-#Dowload image Wildfly
+#Dowload postgreSQL image
 FROM postgres:latest
 
-#Config 
+#update system
 RUN apt-get update -y && apt-get upgrade -y
 
-#modules postgres
+#install postgreSQL modules
 RUN apt-get install postgresql-contrib
 
-#Copy script sql to execute
+#Copy SQL script to execute
 COPY ./init.sql /docker-entrypoint-initdb.d/
 COPY ./insert.sql /docker-entrypoint-initdb.d/
